@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Forcir Design</title>
+
+    <link rel="stylesheet" type="text/css" href="../dist/css/ui.css" />
+    <script src="../dist/js/vendor.js"></script>
+</head>
+<body class="examples">
+    <div class="site-header">
+        <nav role="navigation" class="navigation">
+            <div class="container container-fixed">
+                <div class="navigation-logo">
+                    <a href="https://www.forcir.com" class="navigation-logo-link">Forcir</a>
+                    <span class="navigation-logo-project-link">design</span>
+                </div>
+                <div class="navigation-links">
+                    <ul class="navigation-links-right">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="navigation-dummy"></div>
+    </div>
+    <div class="site-content">
+        <ul class="doc-menu"></ul>
+        <section id="section-buttons">
+            <div class="container container-fixed">
+                <h2><div>Buttons</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <button type="button" class="button">Button</button>
+                            <button type="button" class="button button-sm">Button</button>
+                            <button type="button" class="button button-small">Button</button>
+
+                            <button type="button" class="btn">Button</button>
+                            <button type="button" class="btn btn-sm">Button</button>
+                            <button type="button" class="btn btn-small">Button</button>
+                        </div>
+                        <div class="doc-item-description">
+                            <p>Buttons have two parent classes in the SCSS file <code>.btn</code> and <code>.button</code></p>
+                            <p>All of the colouration classes are given the same option, so you can mix-and-match the button classes however you prefer.</p>
+                            <p><code>.button-small</code> also has a short-hand option of <code>.btn-sm</code>.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code class="html">&lt;button type="button" class="button"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-sm"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-small"&gt;Button&lt;/button&gt;
+
+&lt;button type="button" class="btn"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-sm"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-small"&gt;Button&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="doc-item">
+                            <button type="button" class="button button-primary">Button</button>
+                            <button type="button" class="button button-sm button-primary">Button</button>
+                            <button type="button" class="button button-small button-primary">Button</button>
+
+                            <button type="button" class="btn btn-blue">Button</button>
+                            <button type="button" class="btn btn-sm btn-blue">Button</button>
+                            <button type="button" class="btn btn-small btn-blue">Button</button>
+                        </div>
+                        <div class="doc-item-description">
+                            <p><code>.button-primary</code> buttons have a <code>.button-blue</code> shorthand class; they also have an even shorter <code>.btn-blue</code> option.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;button type="button" class="button button-primary"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-sm button-primary"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-small button-primary"&gt;Button&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-blue"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-sm btn-blue"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-small btn-blue"&gt;Button&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="doc-item">
+                            <button type="button" class="button button-success">Button</button>
+                            <button type="button" class="button button-sm button-success">Button</button>
+                            <button type="button" class="button button-small button-success">Button</button>
+
+                            <button type="button" class="btn btn-green">Button</button>
+                            <button type="button" class="btn btn-sm btn-green">Button</button>
+                            <button type="button" class="btn btn-small btn-green">Button</button>
+                        </div>
+                        <div class="doc-item-description">
+                            <p><code>.button-success</code> buttons have a <code>.button-green</code> shorthand class; they also have an even shorter <code>.btn-green</code> option.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;button type="button" class="button button-success"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-sm button-success"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-small button-success"&gt;Button&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-green"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-sm btn-green"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-small btn-green"&gt;Button&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="doc-item">
+                            <button type="button" class="button button-error">Button</button>
+                            <button type="button" class="button button-sm button-error">Button</button>
+                            <button type="button" class="button button-small button-error">Button</button>
+
+                            <button type="button" class="btn btn-red">Button</button>
+                            <button type="button" class="btn btn-sm btn-red">Button</button>
+                            <button type="button" class="btn btn-small btn-red">Button</button>
+                        </div>
+                        <div class="doc-item-description">
+                            <p><code>.button-error</code> buttons have a <code>.button-red</code> shorthand class; they also have an even shorter <code>.btn-red</code> option.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;button type="button" class="button button-error"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-sm button-error"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-small button-error"&gt;Button&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-red"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-sm btn-red"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="btn btn-small btn-red"&gt;Button&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="doc-item">
+                            <button type="button" class="button disabled">Button</button>
+                            <button type="button" class="button button-blue disabled">Button</button>
+                            <button type="button" class="button button-green disabled">Button</button>
+                            <button type="button" class="button button-red disabled">Button</button>
+
+                            <button type="button" class="button" disabled>Button</button>
+                            <button type="button" class="button button-blue" disabled>Button</button>
+                            <button type="button" class="button button-green" disabled>Button</button>
+                            <button type="button" class="button button-red" disabled>Button</button>
+                        </div>
+                        <div class="doc-item-description">
+                            <p>All buttons support the <code>:disabled</code> flag and the <code>.disabled</code> class.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;button type="button" class="button disabled"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-blue disabled"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-green disabled"&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-red disabled"&gt;Button&lt;/button&gt;
+
+&lt;button type="button" class="button" disabled&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-blue" disabled&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-green" disabled&gt;Button&lt;/button&gt;
+&lt;button type="button" class="button button-red" disabled&gt;Button&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <div class="doc-item hide">
+                            <div class="clearfix">
+                                <button type="button" type="button" class="button button-small button-with-count">
+                                    <span>Button</span>
+                                </button>
+                                <a type="button" class="button-count" href="#">6</a>
+                            </div>
+                        </div>
+                        <div class="doc-item-code hide">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre>
+
+                            </pre>
+                        </div>
+
+                        <div class="doc-item">
+                            <button type="button" type="button" class="button button-small button-icon">
+                                <i class="icon icon-star"></i>
+                                <span>Button</span>
+                                <div>Button</div>
+                            </button>
+
+                            <button type="button" type="button" class="button button-small button-icon">
+                                <i class="icon icon-check"></i>
+                                <span>Button</span>
+                                <div>Button</div>
+                            </button>
+
+                            <button type="button" type="button" class="button button-small button-icon">
+                                <i class="icon icon-x"></i>
+                                <span>Button</span>
+                                <div>Button</div>
+                            </button>
+
+                            <button type="button" type="button" class="button button-small button-icon">
+                                <i class="icon icon-pencil"></i>
+                                <span>Button</span>
+                                <div>Button</div>
+                            </button>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;button type="button" type="button" class="button button-small button-icon"&gt;
+    &lt;i class="icon icon-star"&gt;&lt;/i&gt;
+    &lt;span&gt;Button&lt;/span&gt;
+    &lt;div&gt;Button&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" type="button" class="button button-small button-icon"&gt;
+    &lt;i class="icon icon-check"&gt;&lt;/i&gt;
+    &lt;span&gt;Button&lt;/span&gt;
+    &lt;div&gt;Button&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" type="button" class="button button-small button-icon"&gt;
+    &lt;i class="icon icon-x"&gt;&lt;/i&gt;
+    &lt;span&gt;Button&lt;/span&gt;
+    &lt;div&gt;Button&lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" type="button" class="button button-small button-icon"&gt;
+    &lt;i class="icon icon-pencil"&gt;&lt;/i&gt;
+    &lt;span&gt;Button&lt;/span&gt;
+    &lt;div&gt;Button&lt;/div&gt;
+&lt;/button&gt;</code></pre>
+                        </div>
+
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-buttons -->
+
+        <section id="section-flags">
+            <div class="container container-fixed">
+                <h2><div>Flags</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <i class="flag flag-AD tooltipped tooltipped-n" aria-label="flag-AD"></i>
+                            <i class="flag flag-AE tooltipped tooltipped-n" aria-label="flag-AE"></i>
+                            <i class="flag flag-AG tooltipped tooltipped-n" aria-label="flag-AG"></i>
+                            <i class="flag flag-AM tooltipped tooltipped-n" aria-label="flag-AM"></i>
+                            <i class="flag flag-AR tooltipped tooltipped-n" aria-label="flag-AR"></i>
+                            <i class="flag flag-AT tooltipped tooltipped-n" aria-label="flag-AT"></i>
+                            <i class="flag flag-AU tooltipped tooltipped-n" aria-label="flag-AU"></i>
+                            <i class="flag flag-BE tooltipped tooltipped-n" aria-label="flag-BE"></i>
+                            <i class="flag flag-BF tooltipped tooltipped-n" aria-label="flag-BF"></i>
+                            <i class="flag flag-BG tooltipped tooltipped-n" aria-label="flag-BG"></i>
+                            <i class="flag flag-BO tooltipped tooltipped-n" aria-label="flag-BO"></i>
+                            <i class="flag flag-BR tooltipped tooltipped-n" aria-label="flag-BR"></i>
+                            <i class="flag flag-CA tooltipped tooltipped-n" aria-label="flag-CA"></i>
+                            <i class="flag flag-CD tooltipped tooltipped-n" aria-label="flag-CD"></i>
+                            <i class="flag flag-CG tooltipped tooltipped-n" aria-label="flag-CG"></i>
+                            <i class="flag flag-CH tooltipped tooltipped-n" aria-label="flag-CH"></i>
+                            <i class="flag flag-CL tooltipped tooltipped-n" aria-label="flag-CL"></i>
+                            <i class="flag flag-CM tooltipped tooltipped-n" aria-label="flag-CM"></i>
+                            <i class="flag flag-CN tooltipped tooltipped-n" aria-label="flag-CN"></i>
+                            <i class="flag flag-CO tooltipped tooltipped-n" aria-label="flag-CO"></i>
+                            <i class="flag flag-CZ tooltipped tooltipped-n" aria-label="flag-CZ"></i>
+                            <i class="flag flag-DE tooltipped tooltipped-n" aria-label="flag-DE"></i>
+                            <i class="flag flag-DJ tooltipped tooltipped-n" aria-label="flag-DJ"></i>
+                            <i class="flag flag-DK tooltipped tooltipped-n" aria-label="flag-DK"></i>
+                            <i class="flag flag-DZ tooltipped tooltipped-n" aria-label="flag-DZ"></i>
+                            <i class="flag flag-EE tooltipped tooltipped-n" aria-label="flag-EE"></i>
+                            <i class="flag flag-EG tooltipped tooltipped-n" aria-label="flag-EG"></i>
+                            <i class="flag flag-ES tooltipped tooltipped-n" aria-label="flag-ES"></i>
+                            <i class="flag flag-FL tooltipped tooltipped-n" aria-label="flag-FL"></i>
+                            <i class="flag flag-FR tooltipped tooltipped-n" aria-label="flag-FR"></i>
+                            <i class="flag flag-GA tooltipped tooltipped-n" aria-label="flag-GA"></i>
+                            <i class="flag flag-GB tooltipped tooltipped-n" aria-label="flag-GB"></i>
+                            <i class="flag flag-GM tooltipped tooltipped-n" aria-label="flag-GM"></i>
+                            <i class="flag flag-GT tooltipped tooltipped-n" aria-label="flag-GT"></i>
+                            <i class="flag flag-HN tooltipped tooltipped-n" aria-label="flag-HN"></i>
+                            <i class="flag flag-HT tooltipped tooltipped-n" aria-label="flag-HT"></i>
+                            <i class="flag flag-HU tooltipped tooltipped-n" aria-label="flag-HU"></i>
+                            <i class="flag flag-ID tooltipped tooltipped-n" aria-label="flag-ID"></i>
+                            <i class="flag flag-IE tooltipped tooltipped-n" aria-label="flag-IE"></i>
+                            <i class="flag flag-IL tooltipped tooltipped-n" aria-label="flag-IL"></i>
+                            <i class="flag flag-IN tooltipped tooltipped-n" aria-label="flag-IN"></i>
+                            <i class="flag flag-IQ tooltipped tooltipped-n" aria-label="flag-IQ"></i>
+                            <i class="flag flag-IR tooltipped tooltipped-n" aria-label="flag-IR"></i>
+                            <i class="flag flag-IT tooltipped tooltipped-n" aria-label="flag-IT"></i>
+                            <i class="flag flag-JM tooltipped tooltipped-n" aria-label="flag-JM"></i>
+                            <i class="flag flag-JO tooltipped tooltipped-n" aria-label="flag-JO"></i>
+                            <i class="flag flag-JP tooltipped tooltipped-n" aria-label="flag-JP"></i>
+                            <i class="flag flag-KG tooltipped tooltipped-n" aria-label="flag-KG"></i>
+                            <i class="flag flag-KN tooltipped tooltipped-n" aria-label="flag-KN"></i>
+                            <i class="flag flag-KP tooltipped tooltipped-n" aria-label="flag-KP"></i>
+                            <i class="flag flag-KR tooltipped tooltipped-n" aria-label="flag-KR"></i>
+                            <i class="flag flag-KW tooltipped tooltipped-n" aria-label="flag-KW"></i>
+                            <i class="flag flag-KZ tooltipped tooltipped-n" aria-label="flag-KZ"></i>
+                            <i class="flag flag-LA tooltipped tooltipped-n" aria-label="flag-LA"></i>
+                            <i class="flag flag-LB tooltipped tooltipped-n" aria-label="flag-LB"></i>
+                            <i class="flag flag-LC tooltipped tooltipped-n" aria-label="flag-LC"></i>
+                            <i class="flag flag-LS tooltipped tooltipped-n" aria-label="flag-LS"></i>
+                            <i class="flag flag-LU tooltipped tooltipped-n" aria-label="flag-LU"></i>
+                            <i class="flag flag-LV tooltipped tooltipped-n" aria-label="flag-LV"></i>
+                            <i class="flag flag-MG tooltipped tooltipped-n" aria-label="flag-MG"></i>
+                            <i class="flag flag-MK tooltipped tooltipped-n" aria-label="flag-MK"></i>
+                            <i class="flag flag-ML tooltipped tooltipped-n" aria-label="flag-ML"></i>
+                            <i class="flag flag-MM tooltipped tooltipped-n" aria-label="flag-MM"></i>
+                            <i class="flag flag-MT tooltipped tooltipped-n" aria-label="flag-MT"></i>
+                            <i class="flag flag-MX tooltipped tooltipped-n" aria-label="flag-MX"></i>
+                            <i class="flag flag-NA tooltipped tooltipped-n" aria-label="flag-NA"></i>
+                            <i class="flag flag-NE tooltipped tooltipped-n" aria-label="flag-NE"></i>
+                            <i class="flag flag-NG tooltipped tooltipped-n" aria-label="flag-NG"></i>
+                            <i class="flag flag-NI tooltipped tooltipped-n" aria-label="flag-NI"></i>
+                            <i class="flag flag-NL tooltipped tooltipped-n" aria-label="flag-NL"></i>
+                            <i class="flag flag-NO tooltipped tooltipped-n" aria-label="flag-NO"></i>
+                            <i class="flag flag-OM tooltipped tooltipped-n" aria-label="flag-OM"></i>
+                            <i class="flag flag-PA tooltipped tooltipped-n" aria-label="flag-PA"></i>
+                            <i class="flag flag-PE tooltipped tooltipped-n" aria-label="flag-PE"></i>
+                            <i class="flag flag-PG tooltipped tooltipped-n" aria-label="flag-PG"></i>
+                            <i class="flag flag-PK tooltipped tooltipped-n" aria-label="flag-PK"></i>
+                            <i class="flag flag-PL tooltipped tooltipped-n" aria-label="flag-PL"></i>
+                            <i class="flag flag-PT tooltipped tooltipped-n" aria-label="flag-PT"></i>
+                            <i class="flag flag-PY tooltipped tooltipped-n" aria-label="flag-PY"></i>
+                            <i class="flag flag-QA tooltipped tooltipped-n" aria-label="flag-QA"></i>
+                            <i class="flag flag-RO tooltipped tooltipped-n" aria-label="flag-RO"></i>
+                            <i class="flag flag-RU tooltipped tooltipped-n" aria-label="flag-RU"></i>
+                            <i class="flag flag-RW tooltipped tooltipped-n" aria-label="flag-RW"></i>
+                            <i class="flag flag-SA tooltipped tooltipped-n" aria-label="flag-SA"></i>
+                            <i class="flag flag-SE tooltipped tooltipped-n" aria-label="flag-SE"></i>
+                            <i class="flag flag-SG tooltipped tooltipped-n" aria-label="flag-SG"></i>
+                            <i class="flag flag-SL tooltipped tooltipped-n" aria-label="flag-SL"></i>
+                            <i class="flag flag-SN tooltipped tooltipped-n" aria-label="flag-SN"></i>
+                            <i class="flag flag-SO tooltipped tooltipped-n" aria-label="flag-SO"></i>
+                            <i class="flag flag-SV tooltipped tooltipped-n" aria-label="flag-SV"></i>
+                            <i class="flag flag-TD tooltipped tooltipped-n" aria-label="flag-TD"></i>
+                            <i class="flag flag-TJ tooltipped tooltipped-n" aria-label="flag-TJ"></i>
+                            <i class="flag flag-TL tooltipped tooltipped-n" aria-label="flag-TL"></i>
+                            <i class="flag flag-TR tooltipped tooltipped-n" aria-label="flag-TR"></i>
+                            <i class="flag flag-TZ tooltipped tooltipped-n" aria-label="flag-TZ"></i>
+                            <i class="flag flag-UA tooltipped tooltipped-n" aria-label="flag-UA"></i>
+                            <i class="flag flag-US tooltipped tooltipped-n" aria-label="flag-US"></i>
+                            <i class="flag flag-VE tooltipped tooltipped-n" aria-label="flag-VE"></i>
+                            <i class="flag flag-VN tooltipped tooltipped-n" aria-label="flag-VN"></i>
+                            <i class="flag flag-YE tooltipped tooltipped-n" aria-label="flag-YE"></i>
+
+                        </div>
+                        <div class="doc-item-description">
+                            <h3 class="doc-item-description-header">Flag Sprites</h3>
+                            <p>Flag Sprites was made using the <a href="https://dribbble.com/shots/1089488-Stripe-Flag-Set" target="_blank">Stripe Flag Set release</a> on Dribbble. It was then converted into a spritesheet setup (<a href="http://codepen.io/mur/pen/NxjJwL" target="_blank">available on CodePen</a>) and included into the framework.</p>
+                            <p>Flag Sprites can be used two ways, either as dedicated inlined images or as an adative to a pre-existing element.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;i class="flag flag-{COUNTRY_CODE}"&gt;&lt;/i&gt;</code></pre>
+                        </div>
+
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-flags -->
+
+        <section id="section-patterns">
+            <div class="container container-fixed">
+                <h2><div>Patterns</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="pattern-block"></div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p><a href="https://patterns.forcir.com">Patterns</a> an API-based web app that leverages the power of <a href="https://github.com/jasonlong/geo_pattern" target="_blank">GeoPatterning</a>.</p>
+                            <p>This is best used as a placeholder or as means to add colour, texture and personality to an otherwise mundane page.</p>
+                            <p>Patterns change in dimensions, color and pattern based on the input.</p>
+                            <h4>It's also available open-source!</h4>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=Joshua-F&repo=patterns&type=fork&v=2" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+                            <iframe src="https://ghbtns.com/github-btn.html?user=Joshua-F&repo=patterns&type=watch&v=2" frameborder="0" scrolling="0" width="75px" height="20px"></iframe>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML (&lt;img&gt;)</h4>
+                            <pre><code>&lt;img src="https://patterns.forcir.com/v1/patterns" alt="Pattern Block" /&gt;</code></pre>
+                            <hr>
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;div class="pattern-block"&gt;&lt;/div&gt;</code></pre>
+                            <h4 class="doc-item-code-header">SCSS</h4>
+                            <pre><code>.pattern-block {
+    @include pattern(patterns);
+    height: 150px;
+    width: 150px;
+}
+</code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-patterns -->
+
+        <section id="section-gallery">
+            <div class="container container-fixed">
+                <h2><div>Image Gallery / Lightbox</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="gallery gallery-grid">
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Daytona Beach <small>United States</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>
+                                        Bad Pyrmont <small>Deutschland</small>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Highlands <small>United States</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Daytona Beach <small>United States</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>
+                                        Bad Pyrmont <small>Deutschland</small>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
+                                </figure>
+                                <figure class="gallery-grid-item">
+                                    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+                                    <figcaption>Highlands <small>United States</small></figcaption>
+                                </figure>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+                              <symbol id="close" viewBox="0 0 18 18">
+                                <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+                                        S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+                                        l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+                                        c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+                                        s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"/>
+                              </symbol>
+                            </svg>
+                        </div>
+                        <div class="doc-item-description">
+                            <p>The Image Gallery is an extension of a <a href="http://codepen.io/supah/pen/ZWGJeR/" target="blank">CodePen by Supah</a>.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;div class="gallery"&gt;
+    &lt;figure class="gallery-item"&gt;
+        &lt;img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&amp;fit=crop&amp;fm=jpg&amp;h=400&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=600" alt="" /&gt;
+        &lt;figcaption&gt;Daytona Beach &lt;small&gt;United States&lt;/small&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-gallery -->
+
+        <section id="section-icons">
+            <div class="container container-fixed">
+                <h2><div>Icons</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="tooltipped tooltipped-n" aria-label="icon-alert"><i class="icon icon-alert"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-down"><i class="icon icon-arrow-down"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-left"><i class="icon icon-arrow-left"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-right"><i class="icon icon-arrow-right"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-up"><i class="icon icon-arrow-up"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-small-down"><i class="icon icon-arrow-small-down"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-small-left"><i class="icon icon-arrow-small-left"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-small-right"><i class="icon icon-arrow-small-right"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-arrow-small-up"><i class="icon icon-arrow-small-up"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-beaker"><i class="icon icon-beaker"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-bell"><i class="icon icon-bell"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-bold"><i class="icon icon-bold"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-book"><i class="icon icon-book"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-bookmark"><i class="icon icon-bookmark"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-briefcase"><i class="icon icon-briefcase"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-broadcast"><i class="icon icon-broadcast"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-browser"><i class="icon icon-browser"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-bug"><i class="icon icon-bug"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-calendar"><i class="icon icon-calendar"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-check"><i class="icon icon-check"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-checklist"><i class="icon icon-checklist"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-chevron-down"><i class="icon icon-chevron-down"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-chevron-left"><i class="icon icon-chevron-left"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-chevron-right"><i class="icon icon-chevron-right"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-chevron-up"><i class="icon icon-chevron-up"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-circle-slash"><i class="icon icon-circle-slash"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-circuit-board"><i class="icon icon-circuit-board"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-clippy"><i class="icon icon-clippy"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-clock"><i class="icon icon-clock"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-cloud-download"><i class="icon icon-cloud-download"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-cloud-upload"><i class="icon icon-cloud-upload"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-code"><i class="icon icon-code"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-comment-discussion"><i class="icon icon-comment-discussion"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-comment"><i class="icon icon-comment"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-credit-card"><i class="icon icon-credit-card"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-dash"><i class="icon icon-dash"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-dashboard"><i class="icon icon-dashboard"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-database"><i class="icon icon-database"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-desktop-download"><i class="icon icon-desktop-download"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-device-camera-video"><i class="icon icon-device-camera-video"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-device-camera"><i class="icon icon-device-camera"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-device-desktop"><i class="icon icon-device-desktop"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-device-mobile"><i class="icon icon-device-mobile"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff-added"><i class="icon icon-diff-added"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff-ignored"><i class="icon icon-diff-ignored"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff-modified"><i class="icon icon-diff-modified"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff-removed"><i class="icon icon-diff-removed"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff-renamed"><i class="icon icon-diff-renamed"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-diff"><i class="icon icon-diff"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-ellipsis"><i class="icon icon-ellipsis"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-eye"><i class="icon icon-eye"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-binary"><i class="icon icon-file-binary"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-code"><i class="icon icon-file-code"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-directory"><i class="icon icon-file-directory"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-media"><i class="icon icon-file-media"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-pdf"><i class="icon icon-file-pdf"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-submodule"><i class="icon icon-file-submodule"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-symlink-directory"><i class="icon icon-file-symlink-directory"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-symlink-file"><i class="icon icon-file-symlink-file"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-text"><i class="icon icon-file-text"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-file-zip"><i class="icon icon-file-zip"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-flame"><i class="icon icon-flame"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-fold"><i class="icon icon-fold"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-gear"><i class="icon icon-gear"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-gift"><i class="icon icon-gift"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-gist-secret"><i class="icon icon-gist-secret"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-gist"><i class="icon icon-gist"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-git-branch"><i class="icon icon-git-branch"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-git-commit"><i class="icon icon-git-commit"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-git-compare"><i class="icon icon-git-compare"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-git-merge"><i class="icon icon-git-merge"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-git-pull-request"><i class="icon icon-git-pull-request"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-globe"><i class="icon icon-globe"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-graph"><i class="icon icon-graph"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-heart"><i class="icon icon-heart"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-history"><i class="icon icon-history"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-home"><i class="icon icon-home"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-horizontal-rule"><i class="icon icon-horizontal-rule"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-hubot"><i class="icon icon-hubot"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-inbox"><i class="icon icon-inbox"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-info"><i class="icon icon-info"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-issue-closed"><i class="icon icon-issue-closed"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-issue-opened"><i class="icon icon-issue-opened"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-issue-reopened"><i class="icon icon-issue-reopened"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-italic"><i class="icon icon-italic"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-jersey"><i class="icon icon-jersey"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-key"><i class="icon icon-key"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-keyboard"><i class="icon icon-keyboard"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-law"><i class="icon icon-law"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-light-bulb"><i class="icon icon-light-bulb"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-link-external"><i class="icon icon-link-external"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-link"><i class="icon icon-link"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-list-ordered"><i class="icon icon-list-ordered"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-list-unordered"><i class="icon icon-list-unordered"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-location"><i class="icon icon-location"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-lock"><i class="icon icon-lock"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mail-read"><i class="icon icon-mail-read"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mail-reply"><i class="icon icon-mail-reply"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mail"><i class="icon icon-mail"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-markdown"><i class="icon icon-markdown"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-megaphone"><i class="icon icon-megaphone"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mention"><i class="icon icon-mention"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-milestone"><i class="icon icon-milestone"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mirror"><i class="icon icon-mirror"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mortar-board"><i class="icon icon-mortar-board"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-mute"><i class="icon icon-mute"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-no-newline"><i class="icon icon-no-newline"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-organization"><i class="icon icon-organization"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-package"><i class="icon icon-package"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-paintcan"><i class="icon icon-paintcan"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-pencil"><i class="icon icon-pencil"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-person"><i class="icon icon-person"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-pin"><i class="icon icon-pin"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-plug"><i class="icon icon-plug"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-plus"><i class="icon icon-plus"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-primitive-dot"><i class="icon icon-primitive-dot"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-primitive-square"><i class="icon icon-primitive-square"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-pulse"><i class="icon icon-pulse"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-question"><i class="icon icon-question"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-quote"><i class="icon icon-quote"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-radio-tower"><i class="icon icon-radio-tower"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo-clone"><i class="icon icon-repo-clone"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo-force-push"><i class="icon icon-repo-force-push"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo-forked"><i class="icon icon-repo-forked"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo-pull"><i class="icon icon-repo-pull"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo-push"><i class="icon icon-repo-push"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-repo"><i class="icon icon-repo"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-rocket"><i class="icon icon-rocket"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-rss"><i class="icon icon-rss"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-ruby"><i class="icon icon-ruby"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-search"><i class="icon icon-search"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-server"><i class="icon icon-server"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-settings"><i class="icon icon-settings"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-shield"><i class="icon icon-shield"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-sign-in"><i class="icon icon-sign-in"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-sign-out"><i class="icon icon-sign-out"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-smiley"><i class="icon icon-smiley"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-squirrel"><i class="icon icon-squirrel"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-star"><i class="icon icon-star"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-stop"><i class="icon icon-stop"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-sync"><i class="icon icon-sync"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-tag"><i class="icon icon-tag"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-tasklist"><i class="icon icon-tasklist"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-telescope"><i class="icon icon-telescope"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-terminal"><i class="icon icon-terminal"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-text-size"><i class="icon icon-text-size"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-three-bars"><i class="icon icon-three-bars"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-thumbsdown"><i class="icon icon-thumbsdown"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-thumbsup"><i class="icon icon-thumbsup"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-tools"><i class="icon icon-tools"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-trashcan"><i class="icon icon-trashcan"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-triangle-down"><i class="icon icon-triangle-down"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-triangle-left"><i class="icon icon-triangle-left"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-triangle-right"><i class="icon icon-triangle-right"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-triangle-up"><i class="icon icon-triangle-up"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-unfold"><i class="icon icon-unfold"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-unmute"><i class="icon icon-unmute"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-unverified"><i class="icon icon-unverified"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-verified"><i class="icon icon-verified"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-versions"><i class="icon icon-versions"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-watch"><i class="icon icon-watch"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-x"><i class="icon icon-x"></i></div>
+                            <div class="tooltipped tooltipped-n" aria-label="icon-zap"><i class="icon icon-zap"></i></div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p>Icons are made possible thanks to the <a href="https://octicons.github.com/" target="blank">Octicons</a> library.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code><i class="icon icon-{name}"></i></code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-icons -->
+
+        <section id="section-sortables">
+            <div class="container container-fixed">
+                <h2><div>Sortables</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="sortables">
+                                <div class="sort-controls">
+                                    <button class="button button-small sort-filter" data-filter="all">View All</button>
+                                    <button class="button button-small sort-filter" data-filter=".sort-category-1">Category One</button>
+                                    <button class="button button-small sort-filter" data-filter=".sort-category-2">Category Two</button>
+                                    <button class="button button-small sort-filter" data-filter=".sort-category-3">Category Three</button>
+                                    <button class="button button-small sort-filter" data-filter=".sort-category-4">Category Four</button>
+                                    <button class="button button-small sort-filter" data-filter=".another-category">Another Category</button>
+                                </div>
+
+                                <div class="sort-container">
+                                    <div class="sort-item sort-category-1 another-category"></div>
+                                    <div class="sort-item sort-category-2"></div>
+                                    <div class="sort-item sort-category-3 another-category"></div>
+                                    <div class="sort-item sort-category-4"></div>
+
+                                    <div class="sort-item sort-category-1"></div>
+                                    <div class="sort-item sort-category-2 another-category"></div>
+                                    <div class="sort-item sort-category-3 another-category"></div>
+                                    <div class="sort-item sort-category-4"></div>
+
+                                    <div class="sort-item sort-category-1 another-category"></div>
+                                    <div class="sort-item sort-category-2 another-category"></div>
+                                    <div class="sort-item sort-category-3"></div>
+                                    <div class="sort-item sort-category-4 another-category"></div>
+
+                                    <div class="sort-item sort-category-1"></div>
+                                    <div class="sort-item sort-category-2 another-category"></div>
+                                    <div class="sort-item sort-category-3 another-category"></div>
+                                    <div class="sort-item sort-category-4"></div>
+
+                                    <div class="sort-item sort-category-1 another-category"></div>
+                                    <div class="sort-item sort-category-2 another-category"></div>
+                                    <div class="sort-item sort-category-3 another-category"></div>
+                                    <div class="sort-item sort-category-4"></div>
+
+                                    <div class="sort-item sort-category-1"></div>
+                                    <div class="sort-item sort-category-2 another-category"></div>
+                                    <div class="sort-item sort-category-3 another-category"></div>
+                                    <div class="sort-item sort-category-4 another-category"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p></p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;div class="sortables"&gt;
+    &lt;div class="sort-controls"&gt;
+        &lt;button class="button button-small sort-filter" data-filter="all"&gt;View All&lt;/button&gt;
+        &lt;button class="button button-small sort-filter" data-filter=".sort-category-1"&gt;Category One&lt;/button&gt;
+        &lt;button class="button button-small sort-filter" data-filter=".sort-category-2"&gt;Category Two&lt;/button&gt;
+        &lt;button class="button button-small sort-filter" data-filter=".sort-category-3"&gt;Category Three&lt;/button&gt;
+        &lt;button class="button button-small sort-filter" data-filter=".sort-category-4"&gt;Category Four&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="sort-container"&gt;
+        &lt;div class="sort-item sort-category-1"&gt;&lt;/div&gt;
+        &lt;div class="sort-item sort-category-2"&gt;&lt;/div&gt;
+        &lt;div class="sort-item sort-category-3"&gt;&lt;/div&gt;
+        &lt;div class="sort-item sort-category-4"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            <h4 class="doc-item-code-header">jQuery</h4>
+                            <h4 class="doc-item-code-header">jQuery</h4>
+                            <pre><code>$('.sortables').sortables({
+    selectors: {
+        filter: '.sort-filter'
+    }
+});</code></pre>
+                        </div>
+                        <script type="text/javascript">
+                            $('.sortables').sortables({
+                                selectors: {
+                                    filter: '.sort-filter'
+                                }
+                            });
+                        </script>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-sortables -->
+
+        <section id="section-countUp">
+            <div class="container container-fixed">
+                <h2><div>Counter (Up / Down)</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <span id="counter">0</span>
+                            <hr />
+                            <div class="flex-table">
+                                <div class="flex-table-item flex-table-item-primary field-wrapper">
+                                    <input type="text" name="counter-value" id="counter-value" class="input-block" placeholder="Enter in Any Value" />
+                                </div>
+                                <div class="flex-table-item">
+                                    <button class="button button-icon" id="restart-counter">
+                                        <i class="icon icon-sync"></i>
+                                        <span>Count</span>
+                                        <div>Count</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p></p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;span id="counter"&gt;&lt;/span&gt;</code></pre>
+                            <h4 class="doc-item-code-header">jQuery</h4>
+                            <pre><code>var counterOptions = {
+    useEasing : false,
+    useGrouping : true,
+    separator : ',',
+    decimal : '.',
+    prefix : '',
+    suffix : ''
+};
+var counter = new CountUp("counter", 0, 2788, 0, 5.5, counterOptions);
+counter.start();</code></pre>
+                        </div>
+                        <script type="text/javascript">
+                            $('#restart-counter').click(function(e) {
+                                var counterBase   = 0;
+                                var counterTarget = 0;
+                                if ($('#counter').html()) {
+                                    counterBase = parseInt($('#counter').html());
+                                }
+                                if ($('#counter-value').val()) {
+                                    counterTarget = parseInt($('#counter-value').val());
+                                }
+
+                                var counterOptions = {
+                                    useEasing : true,
+                                    useGrouping : true,
+                                    separator : ',',
+                                    decimal : '.',
+                                    prefix : '',
+                                    suffix : ''
+                                };
+                                var counter = new CountUp(
+                                    "counter",              // Target Element
+                                    counterBase,            // Starting Value (Base)
+                                    counterTarget,          // Ending Value (Target)
+                                    0,                      // Number of Decimals spaces
+                                    5.25,                   // Time/Duration (seconds)
+                                    counterOptions          // Counter Options Object
+                                );
+                                counter.start();
+                            });
+                        </script>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-countUp -->
+
+        <section id="section-alerts">
+            <div class="container container-fixed">
+                <h2><div>Alerts</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="alert">
+                                <span>This is an informative-purposed alert. Most useful when providing additional details about something.</span>
+                            </div>
+                            <hr>
+                            <div class="alert alert-success">
+                                <span>This is a success-purposed alert. Yay! Something went right so now you can use this!</span>
+                            </div>
+                            <hr>
+                            <div class="alert alert-warning">
+                                <span>This is a warning-purposed alert. Used when giving a heads up about something.</span>
+                            </div>
+                            <hr>
+                            <div class="alert alert-error">
+                                <span>This is an error-purposed alert. Used when something goes wrong.</span>
+                            </div>
+                            <hr>
+                            <div class="alert alert-blankslate">
+                                <!-- Optional -->
+                                <i class="icon-large icon-check"></i>
+                                <i class="icon-large icon-x"></i>
+                                <i class="icon-large icon-alert"></i>
+                                <!-- Optional -->
+                                <h3>Blankslate Alert</h3>
+                                <p>This is a blankslate-style alert.</p>
+                                <p>For when an area needs to be occupied and a function can be performed to occupy the area.</p>
+                                <button type="button" class="button">Perform Action!</button>
+                            </div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p></p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;div class="alert"&gt;
+    &lt;span&gt;This is an Alert.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success"&gt;
+    &lt;span&gt;This is an Alert.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning"&gt;
+    &lt;span&gt;This is an Alert.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-error"&gt;
+    &lt;span&gt;This is an Alert.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-blankslate"&gt;
+    &lt;i class="icon-large icon-alert"&gt;&lt;/i&gt;
+    &lt;h3&gt;Blankslate Alert&lt;/h3&gt;
+    &lt;button&gt;Perform Action&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-alerts -->
+
+        <section id="section-loose-leaf">
+            <div class="container container-fixed">
+                <h2><div></div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="loose-leaf">
+                                <div class="loose-leaf-content">
+                                    <div class="loose-leaf-content-body">
+                                        <p>This is a loose leaf piece of paper!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p>Read the paper! That's what it is for.</p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre>
+
+                            </pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-loose-leaf -->
+
+        <section id="section-graphs">
+            <div class="container container-fixed">
+                <h2><div>Smart Graphs</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div data-graph-items="3114,3041,2884,2516,3145,3072,3188,2571,2869,2584,2531,2730,3153,2734,3149,2980" class="graphed"></div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p></p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">HTML</h4>
+                            <pre><code>&lt;div data-graph-items="3114,3041,2884,2516,3145,3072,3188,2571,2869,2584,2531,2730,3153,2734,3149,2980" class="graphed"&gt;&lt;/div&gt;</code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-graphs -->
+
+        <section id="section-gradients">
+            <div class="container container-fixed">
+                <h2><div>Gradients</div></h2>
+                <div class="columns">
+                    <div class="column three-fourths">
+                        <div class="doc-item">
+                            <div class="gradient-x"></div>
+                            <div class="gradient-y"></div>
+                            <div class="gradient-three-colors"></div>
+                        </div>
+                        <div class="doc-item-description">
+                            <p></p>
+                        </div>
+                        <div class="doc-item-code">
+                            <h4 class="doc-item-code-header">SCSS</h4>
+                            <pre><code>.gradient-x { @include gradient-blue(); }
+.gradient-y { @include gradient-blue-green(); }
+.gradient-three-colors { @include gradient-three-colors(); }</code></pre>
+                        </div>
+                    </div> <!-- // .column.three-fourths -->
+                </div> <!-- // .columns -->
+            </div> <!-- // .container container-fixed -->
+        </section> <!-- // #section-gradients -->
+
+    </div>
+    <div class="site-extras">
+        <script src="../dist/js/script.js"></script>
+    </div>
+</body>
+</html>

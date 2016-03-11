@@ -1,0 +1,100 @@
+.container {
+    @include clearfix;
+
+    width: $screen-container;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+
+    @media (max-width: $screen-max) {
+        width: $tablet-container;
+    }
+
+    @media (max-width: $tablet-max) {
+        width: $phone-container;
+    }
+
+    &-tablet-max {
+        max-width: $tablet-container;
+    }
+
+    &-phone-max {
+        max-width: $phone-container;
+    }
+
+    &-fixed {
+        width: $screen-container !important;
+        max-width: none;
+    }
+}
+
+// Grid system
+//
+// Create rows with `.columns` to clear the floated columns and outdent the
+// padding on `.column`s with negative margin for alignment.
+
+.columns {
+    @include clearfix;
+
+    margin-right: -$gutter;
+    margin-left: -$gutter;
+
+    .column {
+        padding-right: $gutter;
+        padding-left: $gutter;
+        min-height: 1px;
+        float: left;
+
+        // Column widths
+        &.one-third {
+            width: 33.333333%;
+        }
+
+        &.two-thirds {
+            width: 66.666666%;
+        }
+
+        &.one-fourth {
+            width: 25%;
+        }
+
+        &.one-half {
+            width: 50%;
+        }
+
+        &.three-fourths {
+            width: 75%;
+        }
+
+        &.one-fifth {
+            width: 20%;
+        }
+
+        &.two-fifths {
+            width: 40%;
+        }
+
+        &.three-fifths {
+            width: 60%;
+        }
+
+        &.four-fifths {
+            width: 80%;
+        }
+
+        // Single column hack
+        &.single-column {
+            padding-right: $gutter;
+            padding-left: $gutter;
+        }
+
+        // Equal width columns via table sorcery.
+        &.table-column {
+            padding-right: $gutter;
+            padding-left: $gutter;
+            vertical-align: top;
+            display: table-cell;
+            width: 1%;
+        }
+    }
+}

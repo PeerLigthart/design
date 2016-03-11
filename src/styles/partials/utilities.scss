@@ -1,0 +1,25 @@
+.clearfix {
+    @include clearfix;
+}
+
+hr {
+    @include clearfix();
+    background: transparent;
+    margin: ($gutter) 0;
+    overflow: hidden;
+    height: 0;
+
+    border: 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.hide,
+.hidden {
+    display: none;
+}
+
+.unformattedList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

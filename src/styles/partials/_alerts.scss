@@ -1,0 +1,52 @@
+.alert {
+    position: relative;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #246;
+    background-color: #e2eef9;
+    border: 1px solid #bac6d3;
+    border-radius: 3px;
+
+    &-green,
+    &-success {
+        color: #424C42;
+        background-color: #ECFFEA;
+        border-color: #C8DFC2;
+    }
+
+    &-warn,
+    &-yellow,
+    &-warning {
+        color: #4c4a42;
+        background-color: #fff9ea;
+        border-color: #dfd8c2;
+    }
+
+    &-red,
+    &-error {
+        color: #911;
+        background-color: #fcdede;
+        border-color: #d2b2b2;
+    }
+
+    &-blankslate {
+        border-radius: 3px;
+        position: relative;
+        text-align: center;
+        background: none;
+        box-shadow: none;
+        padding: 30px;
+        color: $black;
+        border: 0;
+
+        p {
+            margin: 0 0 ($gutter / 4);
+
+            + button,
+            + .button {
+                margin-top: $gutter;
+            }
+        }
+    }
+}

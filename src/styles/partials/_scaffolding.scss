@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+
+    &:focus {
+        outline: 0;
+        text-decoration: none;
+        border-color: $focus-border-color;
+        box-shadow: 0 0 5px transparentize($focus-border-color, 0.5);
+    }
+}
+
+input,
+select,
+textarea,
+button {
+    font: #{$body-font-size}/1.4 $body-font;
+}
+
+body {
+    font: #{$body-font-size}/1.4 $body-font;
+    color: $brand-gray-dark;
+    background-color: $white;
+    backface-visibility: hidden;
+
+    .site-header ~ .site-content {
+        padding-top: $gutter;
+    }
+
+    &.freeze {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+a,
+a:link {
+    text-decoration: none;
+    color: $brand-primary;
+
+    &:hover {
+        color: darken($brand-primary, 15%);
+    }
+}

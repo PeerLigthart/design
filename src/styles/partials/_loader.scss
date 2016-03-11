@@ -1,0 +1,48 @@
+.loader {
+    width: 40px;
+    height: 40px;
+
+    &-cube {
+        animation: loaderCube 1.3s infinite ease-in-out;
+        background-color: $brand-primary;
+        height: 33%;
+        width: 33%;
+        float: left;
+
+        &-1 {
+            animation-delay: 0.2s;
+        }
+
+        &-2 {
+            animation-delay: 0.3s;
+        }
+
+        &-3 {
+            animation-delay: 0.4s;
+        }
+
+        &-4 {
+            animation-delay: 0.1s;
+        }
+
+        &-5 {
+            animation-delay: 0.2s;
+        }
+
+        &-6 {
+            animation-delay: 0.3s;
+        }
+
+        &-7 {
+            animation-delay: 0s;
+        }
+
+        &-8 {
+            animation-delay: 0.1s;
+        }
+
+        &-9 {
+            animation-delay: 0.2s;
+        }
+    }
+}

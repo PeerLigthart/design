@@ -1,0 +1,16 @@
+.sortables {
+    .sort-controls {
+        
+    }
+
+    .sort-container {
+        .sort-item {
+            display: none;
+
+            &-contents {
+                min-height: 1px;
+                min-width: 1px;
+            }
+        }
+    }
+}

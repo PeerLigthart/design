@@ -1,0 +1,16 @@
+{
+    "services": [
+        {
+            "name": "Design",
+            "icon": "design",
+            "url": "https://designs.forcir.com",
+            "class": "design"
+        },
+        {
+            "name": "Patterns",
+            "icon": "patterns",
+            "url": "https://patterns.forcir.com",
+            "class": "patterns"
+        }
+    ]
+}

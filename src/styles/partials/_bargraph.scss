@@ -1,0 +1,46 @@
+.graphed {
+    min-height: 150px;
+    position: relative;
+
+    .graph {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        vertical-align: bottom;
+
+        .bar {
+            @extend .tooltipped;
+            @extend .tooltipped-n;
+
+            transition-delay: 4s;
+            transition: all 300ms ease-in-out;
+            background-color: $border-color;
+            vertical-align: bottom;
+            display: inline-block;
+            position: relative;
+            height: 1px;
+
+            &.highest {
+                background-color: darken($brand-green, 20%);
+            }
+
+            &.lowest {
+                background-color: lighten($brand-red, 20%);
+            }
+
+            &:hover {
+                background-color: $brand-gray-light;
+
+                &.highest {
+                    background-color: $brand-green;
+                }
+
+                &.lowest {
+                    background-color: $brand-red;
+                }
+            }
+        }
+    }
+}

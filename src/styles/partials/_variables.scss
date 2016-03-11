@@ -1,0 +1,93 @@
+// Project URL's
+$project-url-homepage:                         'https://www.forcir.com';
+$project-url-patterns:                         'https://patterns.forcir.com';
+$project-url-designs:                          'https://design.forcir.com';
+
+// Versions
+$patterns-version:                             'v1';
+
+// Base Reference for space between elements
+$gutter:                                        20px !default;
+
+// Brand colors
+$brand-primary:                                 #3072b3 !default;
+$brand-green:                                   #6cc644 !default;
+$brand-red:                                     #bd2c00 !default;
+$brand-orange:                                  #c9510c !default;
+$brand-purple:                                  #6e5494 !default;
+
+$brand-gray:                                    #767676 !default;
+$brand-gray-dark:                               #333333 !default;
+$brand-gray-light:                              #999999 !default;
+
+$black:                                         #141823 !default;
+$white:                                         #ffffff !default;
+
+$border-color:                                  #e5e5e5 !default;
+$focus-border-color:                            #51a7e8 !default;
+
+// Animation Sequence
+$bezier:                                        cubic-bezier(.3, 0, 0, 1.3) !default;
+
+// z-index values
+$zindex-navigation:                             1300 !default;
+$zindex-modal:                                  1200 !default;
+$zindex-gallery-item:                           1100 !default;
+
+// Breakpoints & Containers
+$phone-max:                                     480px !default;
+$phone-min:                                     ($phone-max - 1) !default;
+$phone-container:                               auto !default;
+
+$tablet-max:                                    767px !default;
+$tablet-min:                                    ($tablet-max - 1) !default;
+$tablet-container:                              600px !default;
+
+$screen-max:                                    992px !default;
+$screen-min:                                    ($screen-max - 1) !default;
+$screen-container:                              980px !default;
+
+// Font stack
+$body-font:                                     'Helvetica Neue', Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+
+// The base body font size
+$body-font-size:                                13px !default;
+
+// Monospace font stack
+$mono-font:                                     Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
+
+// Button colors
+$button-default-bg:                             #eeeeee !default;
+$button-default-grad-bg:                        #fcfcfc !default;
+$button-default-border:                         #d5d5d5 !default;
+
+$button-blue-bg:                                #3072b3 !default;
+$button-blue-grad-bg:                           #599bcd !default;
+$button-blue-border:                            #2a65a0 !default;
+
+// State indicators.
+$status-open:                                   $brand-green;
+$status-closed:                                 $brand-red;
+$status-reverted:                               $status-closed;
+$status-merged:                                 $brand-purple;
+$status-renamed:                                #fffa5d;
+$status-pending:                                #cea61b;
+
+// Repository type colors
+$repo-private-text:                             #a1882b;
+$repo-private-bg:                               #fff9ea;
+$repo-private-icon:                             #e9dba5;
+
+$navigation-height:                             50px !default;
+$navigation-bg:                                 transparentize($white, 0.05) !default;
+$navigation-border-color:                       transparentize($black, .9) !default;
+$navigation-border-height:                      1px !default;
+
+$navigation-fixed-height:                       50px !default;
+$navigation-fixed-bg:                           $white !default;
+$navigation-fixed-fade-out:                     0 !default;
+$navigation-fixed-border-color:                 $border-color !default;
+$navigation-fixed-border-height:                1px !default;
+
+$navigation-return-to-top-width:                40px !default;
+$navigation-return-to-top-height:               40px !default;
