@@ -51,42 +51,45 @@ $screen-max:                                    992px !default;
 $screen-min:                                    ($screen-max - 1) !default;
 $screen-container:                              980px !default;
 
-// Font stack
+// Body Declarations
 $body-font:                                     'ForcirType A', 'ForcirType B', 'Helvetica Neue', Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
-// The base body font size
+// The base body properties
 $body-font-size:                                13px !default;
+$body-bg:                                       $white !default;
+$body-bg-contrast:                                 #e9eaed !default;
 
 // Monospace font stack
 $mono-font:                                     Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
 
+
 // Button colors
 $button-default-bg:                             #eeeeee !default;
-$button-default-grad-bg:                        #fcfcfc !default;
+$button-default-color:                          ($brand-gray-dark) !default;
 $button-default-border:                         #d5d5d5 !default;
 
-$button-default-hover-color:                    #dddddd !default;
-$button-default-hover-border-color:             #cccccc !default;
-$button-default-active-border-color:            #b5b5b5 !default;
-$button-default-active-background-color:        #dcdcdc !default;
+$button-primary-bg:                             #3072b3 !default;
+$button-primary-color:                          ($white) !default;
+$button-primary-border:                         #2a65a0 !default;
 
-$button-blue-bg:                                #3072b3 !default;
-$button-blue-grad-bg:                           #599bcd !default;
-$button-blue-border:                            #2a65a0 !default;
-$button-blue-disabled-color:                    #fefefe !default;
+$button-success-bg:                             #60b044 !default;
+$button-success-color:                          ($white) !default;
+$button-success-border:                         #5ca941 !default;
+// $button-green-grad-bg:                          #8add6d !default;
+// $button-green-hover-border-color:               #4a993e !default;
+// $button-green-disabled-color:                   #fefefe !default;
 
-$button-green-bg:                               #60b044 !default;
-$button-green-grad-bg:                          #8add6d !default;
-$button-green-hover-border-color:               #4a993e !default;
-$button-green-disabled-color:                   #fefefe !default;
+$button-danger-bg:                              #b33630 !default;
+$button-danger-color:                           ($white) !default;
+$button-danger-border:                          #942d28 !default;
 
-$button-red-bg:                                 #b33630 !default;
-$button-red-color:                              #990000 !default;
-$button-red-grad-bg:                            #dc5f59 !default;
-$button-red-hover-border-color:                 #cd504a !default;
-$button-red-disabled-bg:                        #efefef !default;
-$button-red-disabled-color:                     #cb7f7f !default;
-$button-red-disabled-border-color:              #e1e1e1 !default;
+// $button-red-bg:                                 #b33630 !default;
+// $button-red-color:                              #990000 !default;
+// $button-red-grad-bg:                            #dc5f59 !default;
+// $button-red-hover-border-color:                 #cd504a !default;
+// $button-red-disabled-bg:                        #efefef !default;
+// $button-red-disabled-color:                     #cb7f7f !default;
+// $button-red-disabled-border-color:              #e1e1e1 !default;
 
 // Alerts
 $alert-bg:                                      #e2eef9 !default;
