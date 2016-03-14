@@ -1,29 +1,29 @@
 @keyframes loaderCube {
     0%, 70%, 100% {
-        transform: scale3D(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     } 35% {
-        transform: scale3D(0, 0, 1);
+        transform: scale3d(0, 0, 1);
     }
 }
 
 @keyframes navigationServicesAppear {
-    from { transform: scale(.2); }
-    to   { transform: scale(1); }
+    from { transform: scale(0.2); }
+    to { transform: scale(1); }
 }
 
 @keyframes navigationFixedTransitionSlideDown {
     from { transform: translateY(-100%); }
-    to   { transform: translateY(0); }
+    to { transform: translateY(0); }
 }
 
 @keyframes navigationReturnToTopFadeIn {
-    from { transform: scale(.6); opacity: 0; }
-    to   { transform: scale(1);  opacity: 1; pointer-events: auto; }
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1);  opacity: 1; pointer-events: auto; }
 }
 
 @keyframes navigationReturnToTopFadeOut {
     from { transform: scale(1);  opacity: 1; pointer-events: auto; }
-    to   { transform: scale(.6); opacity: 0; }
+    to { transform: scale(0.6); opacity: 0; }
 }
 
 @keyframes galleryPopupOpen {

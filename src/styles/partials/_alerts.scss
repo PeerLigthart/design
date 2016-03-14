@@ -1,33 +1,33 @@
 .alert {
-    position: relative;
-    padding: 15px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #246;
-    background-color: #e2eef9;
-    border: 1px solid #bac6d3;
+    border: 1px solid $alert-border-color;
+    background-color: $alert-bg;
+    color: $alert-color;
     border-radius: 3px;
+    position: relative;
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 15px;
 
     &-green,
     &-success {
-        color: #424C42;
-        background-color: #ECFFEA;
-        border-color: #C8DFC2;
+        border-color: $alert-green-border-color;
+        background-color: $alert-green-bg;
+        color: $alert-green-color;
     }
 
     &-warn,
     &-yellow,
     &-warning {
-        color: #4c4a42;
-        background-color: #fff9ea;
-        border-color: #dfd8c2;
+        border-color: $alert-yellow-border-color;
+        background-color: $alert-yellow-bg;
+        color: $alert-yellow-color;
     }
 
     &-red,
     &-error {
-        color: #911;
-        background-color: #fcdede;
-        border-color: #d2b2b2;
+        border-color: $alert-red-border-color;
+        background-color: $alert-red-bg;
+        color: $alert-red-color;
     }
 
     &-blankslate {

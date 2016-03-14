@@ -1,6 +1,6 @@
 $multiline-max-width: 250px;
 $tooltip-background-color: transparentize($black, 0.2);
-$tooltip-text-color: #fff;
+$tooltip-text-color: $white;
 
 .tooltipped {
     position: relative;
@@ -40,7 +40,7 @@ $tooltip-text-color: #fff;
     height: 0;
     color: $tooltip-background-color;
     pointer-events: none;
-    content: "";
+    content: '';
     border: 5px solid transparent;
 }
 
@@ -221,7 +221,7 @@ $tooltip-text-color: #fff;
 // Alert tooltips
 //
 // Colors for different alert states.
-@mixin colorizeTooltip($text-color, $background-color) {
+@mixin colorize-tooltip($text-color, $background-color) {
     &::after {
         color: $text-color;
         background: $background-color;

@@ -1,0 +1,5 @@
+@mixin patterns($name, $background: contain) {
+    background-size: #{$background};
+    background-repeat: repeat;
+    background-image: url('#{$project-url-patterns}/#{$patterns-version}/#{$name}');
+}

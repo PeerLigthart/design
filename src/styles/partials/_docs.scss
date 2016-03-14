@@ -7,7 +7,7 @@ body {
 
         .doc-menu {
             @extend .one-fourth;
-            @include removeListDefaults();
+            @include remove-list-defaults();
 
             transform: translate(50%, 50%);
             position: fixed;
@@ -19,7 +19,7 @@ body {
 
         #section-patterns {
             .pattern-block {
-                @include pattern(patterns);
+                @include patterns(patterns);
                 height: 150px;
                 width: 150px;
             }
@@ -36,7 +36,7 @@ body {
                     width: 10%;
 
                     .icon {
-                        transition: .245s ease-in-out;
+                        transition: 0.245s ease-in-out;
                         font-size: 24px;
                     }
 
@@ -69,26 +69,26 @@ body {
                         width: 50px;
 
                         &.sort-category-1 {
-                            @include pattern(category-one);
+                            @include patterns(category-one);
                         }
 
                         &.sort-category-2 {
-                            @include pattern(category-two);
+                            @include patterns(category-two);
                         }
 
                         &.sort-category-3 {
-                            @include pattern(category-three);
+                            @include patterns(category-three);
                         }
 
                         &.sort-category-4 {
-                            @include pattern(category-four);
+                            @include patterns(category-four);
                         }
                     }
                 }
             }
         }
 
-        #section-countUp {
+        #section-counter {
             .doc-item {
                 .flex-table-item-primary {
                     padding-right: $gutter;
@@ -96,29 +96,8 @@ body {
             }
         }
 
-        #section-gradients {
-            .doc-item {
-                .gradient-x,
-                .gradient-y,
-                .gradient-three-colors {
-                    margin-bottom: ($gutter);
-                    border-radius: 3px;
-                    height: 150px;
-                    width: 100%;
-                }
-
-                .gradient-x { @include gradient-blue(); }
-                .gradient-y { @include gradient-blue-green(); }
-                .gradient-three-colors { @include gradient-three-colors(); }
-
-                div:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
         .doc-item {
-            border-radius: .25rem .25rem 0 0;
+            border-radius: 0.25rem 0.25rem 0 0;
             border: 1px solid $border-color;
             position: relative;
             line-height: 1.4;
@@ -163,9 +142,9 @@ body {
 
             &-code {
                 border: 1px solid $border-color;
-                border-radius: 0 0 .25rem .25rem;
+                border-radius: 0 0 0.25rem 0.25rem;
                 margin-bottom: ($gutter * 2);
-                background-color: #f7f7f7;
+                background-color: lighten(darken($brand-gray-light, 1.5%), 40%);
                 margin-top: -1px;
 
                 &-header {
@@ -174,7 +153,7 @@ body {
                 }
 
                 pre {
-                    background-color: darken(#f7f7f7, 3.5%);
+                    background-color: lighten(darken($brand-gray-light, 5%), 40%);
                     margin: 0 16px 16px;
                     border-radius: 3px;
                     line-height: 1.45;

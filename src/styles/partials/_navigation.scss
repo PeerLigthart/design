@@ -21,7 +21,7 @@
         border-bottom: $navigation-fixed-border-height solid $navigation-fixed-border-color;
         height: $navigation-fixed-height;
         transform: translateY(-100%);
-        transition: .275s;
+        transition: 0.275s;
         position: fixed;
 
         animation: navigationFixedTransitionSlideDown 1s;
@@ -59,12 +59,12 @@
 
                 margin: ($navigation-height / 3.5) 0;
                 height: ($navigation-height / 2.5);
-                transition: .175s;
+                transition: 0.175s;
                 display: block;
                 width: 93px;
                 float: left;
                 content: '';
-                opacity: .5;
+                opacity: 0.5;
             }
 
             &:hover {
@@ -95,12 +95,12 @@
             &-services {
                 @include clearfix();
 
-                box-shadow: 0 8px 13px rgba(0,0,0,.36), 0 0 0 1px rgba(0,0,0,.06);
+                box-shadow: 0 8px 13px transparentize($black, 0.64), 0 0 0 1px transparentize($black, 0.94);
                 transform-origin: 29px -10px;
                 background-color: $white;
                 padding: ($gutter / 2);
-                transition: .175s ease;
-                transform: scale(.2);
+                transition: 0.175s ease;
+                transform: scale(0.2);
                 padding-right: 25px;
                 border-radius: 6px;
                 position: absolute;
@@ -112,7 +112,7 @@
                 top: 100%;
                 left: 0;
 
-                animation: navigationServicesAppear .175s;
+                animation: navigationServicesAppear 0.175s;
                 animation-iteration-count: 1;
                 animation-fill-mode: both;
 
@@ -124,7 +124,7 @@
                 }
 
                 > a {
-                    transition: .275s ease;
+                    transition: 0.275s ease;
                     margin: 15px 0 25px 15px;
                     position: relative;
                     border-radius: 6px;
@@ -153,11 +153,11 @@
                     }
 
                     &.design {
-                        @include pattern(design, cover);
+                        //
                     }
 
                     &.patterns {
-                        @include pattern(patterns, cover);
+                        @include patterns(patterns, cover);
                     }
                 }
 
@@ -171,14 +171,14 @@
                     position: absolute;
                     height: 7px;
                     width: 13px;
-                    content: "";
+                    content: '';
                     top: -7px;
                 }
             }
 
             &.open {
                 &:after {
-                    content: '\f081';
+                    content: '';
                 }
             }
 
@@ -226,13 +226,13 @@
         }
 
         &-left {
-            @include removeListDefaults();
+            @include remove-list-defaults();
 
             float: left;
         }
 
         &-right {
-            @include removeListDefaults();
+            @include remove-list-defaults();
 
             float: right;
         }

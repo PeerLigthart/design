@@ -8,13 +8,13 @@
         top: -13px;
         left: 0;
         font-size: 11px;
-        color: #aaa;
+        color: $brand-gray;
         transition: all 0.1s linear;
         opacity: 0;
         font-weight: bold;
 
         &.on {
-            color: #4481C4;
+            color: $brand-primary;
         }
 
         &.error {

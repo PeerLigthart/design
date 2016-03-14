@@ -1,5 +1,5 @@
 .flag {
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209282/flags.png');
+    background-image: url('../img/flags.png');
     background-position: -4px -129px; // Default to Canada cause homeland ¯¯\(°_o)/¯¯
     display: inline-block;
     height: 17px;
@@ -368,39 +368,39 @@
     &-TD {
         background-position: -4px -948px;
     }
-    
+
     &-TJ {
         background-position: -37px -948px;
     }
-    
+
     &-TL {
         background-position: -4px -969px;
     }
-    
+
     &-TR {
         background-position: -37px -969px;
     }
-    
+
     &-TZ {
         background-position: -4px -990px;
     }
-    
+
     &-UA {
         background-position: -37px -990px;
     }
-    
+
     &-US {
         background-position: -4px -1011px;
     }
-    
+
     &-VE {
         background-position: -37px -1011px;
     }
-    
+
     &-VN {
         background-position: -4px -1032px;
     }
-    
+
     &-YE {
         background-position: -37px -1032px;
     }

@@ -7,10 +7,10 @@
 
     // Place this on every "cell"
     &-item {
-    vertical-align: middle;
-    white-space: nowrap;
-    display: table-cell;
-    width: 1%;
+        vertical-align: middle;
+        white-space: nowrap;
+        display: table-cell;
+        width: 1%;
 
         // Place this on the largest or most important "cell"
         &-primary {

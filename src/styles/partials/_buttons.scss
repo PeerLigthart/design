@@ -21,15 +21,15 @@
     background-image: linear-gradient($button-default-grad-bg, $button-default-bg);
 
     &:focus {
-        box-shadow: 0 0 5px rgba(81, 167, 232, 0.5);
+        box-shadow: 0 0 5px $focus-box-shadow;
         text-decoration: none;
-        border-color: #51a7e8;
+        border-color: $focus-border-color;
         outline: none;
     }
 
     &:focus:hover,
     &.selected:focus {
-        border-color: #51a7e8;
+        border-color: $focus-border-color;
     }
 
     &:hover,
@@ -37,34 +37,35 @@
     &.zeroclipboard-is-hover,
     &.zeroclipboard-is-active {
         text-decoration: none;
-        background-color: #ddd;
-        background-image: linear-gradient(#eee, #ddd);
-        border-color: #ccc;
+        background-color: $button-default-hover-color;
+        background-image: linear-gradient($button-default-bg, $button-default-hover-color);
+        border-color: $button-default-hover-border-color;
     }
 
     &:active,
     &.selected,
     &.zeroclipboard-is-active {
-        background-color: #dcdcdc;
+        background-color: $button-default-active-background-color;
+        box-shadow: inset 0 2px 4px transparentize($black, 0.85);
+        border-color: $button-default-active-border-color;
         background-image: none;
-        border-color: #b5b5b5;
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
     }
 
     &.selected:hover {
-        background-color: darken(#dcdcdc, 5%);
+        background-color: darken($button-default-active-background-color, 5%);
     }
 
     &:disabled,
     &.disabled {
         &,
         &:hover {
-            color: rgba(102, 102, 102, 0.5);
-            cursor: default;
-            background-color: rgba(229, 229, 229, 0.5);
-            background-image: none;
-            border-color: rgba(197, 197, 197, 0.5);
+            border-color: transparentize($button-default-border, 0.5);
+            color: transparentize($brand-gray-dark, 0.5);
             box-shadow: none;
+            cursor: default;
+
+            background-color: transparentize($button-default-bg, 0.5);
+            background-image: none;
         }
     }
 
@@ -76,8 +77,8 @@
 
             transition: right 0.3s $bezier;
             transform: translateY(-50%);
-            line-height: 1.5;
             position: absolute;
+            line-height: 1.5;
             width: 100%;
             right: 100%;
             top: 50%;
@@ -86,8 +87,8 @@
         .icon {
             transition: right 0.3s $bezier;
             transform: translateY(-50%);
-            line-height: 1.5;
             position: absolute;
+            line-height: 1.5;
             width: 100%;
             right: 100%;
             top: 50%;
@@ -109,7 +110,6 @@
         &:hover,
         &:focus,
         &:active {
-
             &:before,
             .icon {
                 right: 0;
@@ -146,89 +146,88 @@
         &.disabled {
             &,
             &:hover {
-                color: #fefefe;
+                color: $button-blue-disabled-color;
+                border-color: lighten($button-blue-border, 20%);
                 background-color: lighten($button-blue-bg, 15%);
                 background-image: linear-gradient(lighten($button-blue-grad-bg, 15%), lighten($button-blue-bg, 15%));
-                border-color: lighten($button-blue-border, 20%);
             }
         }
     }
 
     &-green,
     &-success {
-        color: #fff;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-        background-color: #60b044;
-        background-image: linear-gradient(#8add6d, #60b044);
-        border-color: darken(#60b044, 2%);
+        color: $white;
+        background-color: $button-green-bg;
+        border-color: darken($button-green-bg, 2%);
+        text-shadow: 0 -1px 0 transparentize($black, 0.85);
+        background-image: linear-gradient($button-green-grad-bg, $button-green-bg);
 
         .counter {
-            color: #60b044;
-            background-color: #fff;
+            color: $button-green-bg;
+            background-color: $white;
         }
 
         &:hover {
-            color: #fff;
-            background-color: darken(#60b044, 5%);
-            background-image: linear-gradient(darken(#8add6d, 5%), darken(#60b044, 5%));
-            border-color: #4a993e;
+            color: $white;
+            background-color: darken($button-green-bg, 5%);
+            background-image: linear-gradient(darken($button-green-grad-bg, 5%), darken($button-green-bg, 5%));
+            border-color: $button-green-hover-border-color;
         }
 
         &:active,
         &.selected {
-            background-color: darken(#60b044, 5%);
+            background-color: darken($button-green-bg, 5%);
             background-image: none;
-            border-color: darken(#4a993e, 5%);
+            border-color: darken($button-green-hover-border-color, 5%);
         }
 
         &.selected:hover {
-            background-color: darken(#60b044, 10%);
+            background-color: darken($button-green-bg, 10%);
         }
 
         &:disabled,
         &.disabled {
             &,
             &:hover {
-                color: #fefefe;
-                background-color: #add39f;
-                background-image: linear-gradient(#c3ecb4, #add39f);
-                border-color: #b9dcac #b9dcac #a7c89b;
+                color: $button-green-disabled-color;
+                border-color: lighten(darken($button-green-bg, 2%), 20%);
+                background-color: lighten($button-green-bg, 15%);
+                background-image: linear-gradient(lighten($button-green-grad-bg, 15%), lighten($button-green-bg, 15%));
             }
         }
     }
 
     &-red,
     &-error {
-
-        color: #900;
+        color: $button-red-color;
 
         &:hover {
-            color: #fff;
-            background-color: #b33630;
-            background-image: linear-gradient(#dc5f59, #b33630);
-            border-color: #cd504a;
+            color: $white;
+            background-color: $button-red-bg;
+            background-image: linear-gradient($button-red-grad-bg, $button-red-bg);
+            border-color: $button-red-hover-border-color;
         }
 
         &:active,
         &.selected {
-            color: #fff;
-            background-color: #b33630;
+            color: $white;
+            background-color: $button-red-bg;
             background-image: none;
-            border-color: darken(#cd504a, 15%);
+            border-color: darken($button-red-hover-border-color, 15%);
         }
 
         &.selected:hover {
-            background-color: darken(#b33630, 5%);
+            background-color: darken($button-red-bg, 5%);
         }
 
         &:disabled,
         &.disabled {
             &,
             &:hover {
-                color: #cb7f7f;
-                background-color: #efefef;
-                background-image: linear-gradient(#fefefe, #efefef);
-                border-color: #e1e1e1;
+                color: $button-red-disabled-color;
+                background-color: $button-red-disabled-bg;
+                background-image: linear-gradient(lighten($button-red-disabled-bg, 5%), $button-red-disabled-bg);
+                border-color: $button-red-disabled-border-color;
             }
         }
 
@@ -236,8 +235,8 @@
         &:active,
         &.selected {
             .counter {
-                color: #b33630;
-                background-color: #fff;
+                color: $button-red-bg;
+                background-color: $white;
             }
         }
     }
