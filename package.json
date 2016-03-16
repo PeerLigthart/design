@@ -3,6 +3,9 @@
     "version": "0.1.0",
     "description": "Style toolkit (framework) and guidelines that power the Forcir Front-End",
     "author": "Austin Paquette < austin@forcir.com >",
+    "scripts": {
+        "test": "scss-lint ./src/styles/**/*.scss"
+    },
     "devDependencies": {
         "gulp": "^3.9.0",
         "gulp-autoprefixer": "^3.1.0",
