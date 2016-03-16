@@ -142,7 +142,7 @@
                     }
 
                     &.design {
-                        //
+                        @include app-gradient($brand-primary);
                     }
 
                     &.patterns {
@@ -251,6 +251,8 @@
         }
     }
 
+    // Adding Mobile Responsive Styling
+    // https://github.com/Forcir/design/issues/9
     &-mobile {
         &-toggle {
             touch-action: manipulation;
