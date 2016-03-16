@@ -1,6 +1,6 @@
 // Project URL's
 $project-url-homepage:                         'https://www.forcir.com';
-$project-url-patterns:                         'https://patterns.forcir.com';
+$project-url-patterns:                         'https://patterns.mur.me';
 $project-url-designs:                          'https://design.forcir.com';
 
 // Versions
@@ -43,7 +43,7 @@ $phone-max:                                     480px !default;
 $phone-min:                                     ($phone-max - 1) !default;
 $phone-container:                               auto !default;
 
-$tablet-max:                                    767px !default;
+$tablet-max:                                    768px !default;
 $tablet-min:                                    ($tablet-max - 1) !default;
 $tablet-container:                              600px !default;
 
@@ -120,6 +120,9 @@ $navigation-fixed-bg:                           $white !default;
 $navigation-fixed-fade-out:                     0 !default;
 $navigation-fixed-border-color:                 $border-color !default;
 $navigation-fixed-border-height:                1px !default;
+
+$navigation-mobile-toggle-size:                 40px !default;
+$navigation-mobile-toggle-beat-size:            ($navigation-mobile-toggle-size * 2) !default;
 
 $navigation-return-to-top-width:                40px !default;
 $navigation-return-to-top-height:               40px !default;
