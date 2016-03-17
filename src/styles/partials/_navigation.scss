@@ -127,7 +127,7 @@
                         transform: translate(50%, 50%);
                         position: absolute;
                         font-size: 32px;
-                        display: none;
+                        color: $white;
                         bottom: 50%;
                         right: 50%;
                     }
@@ -141,8 +141,10 @@
                         top: 45px;
                     }
 
+                    // Adding Style to the Design Service Component
+                    // https://github.com/Forcir/design/issues/8
                     &.design {
-                        //
+                        @include app-gradient($brand-primary);
                     }
 
                     &.patterns {
@@ -194,6 +196,10 @@
     &-links {
         @include clearfix();
 
+        @media (max-width: $tablet-max) {
+            display: none;
+        }
+
         > ul {
             > li {
                 line-height: $navigation-height;
@@ -203,9 +209,25 @@
                 font-weight: 500;
                 font-size: 12px;
 
+                a {
+                    // Remove Focus State on Nav Links
+                    // https://github.com/Forcir/design/issues/1
+                    &:focus {
+                        border: 0;
+                        outline: 0;
+                        box-shadow: none;
+                    }
+                }
+
                 .btn,
                 .button {
                     top: -2px;
+
+                    &:focus {
+                        border: 0;
+                        outline: 0;
+                        box-shadow: 0;
+                    }
                 }
 
                 &.active {
@@ -224,6 +246,223 @@
             @include remove-list-defaults();
 
             float: right;
+        }
+
+        &-services {
+            @media (min-width: $tablet-min) {
+                display: none;
+            }
+        }
+    }
+
+    // Adding Mobile Responsive Styling
+    // https://github.com/Forcir/design/issues/9
+    &-mobile {
+        &-toggle {
+            touch-action: manipulation;
+            right: ($gutter / 2) + 5;
+            position: absolute;
+            display: none;
+            z-index: 1;
+            top: 5px;
+
+            @media (max-width: $tablet-max) {
+                display: block;
+            }
+
+            .icon {
+                height: $navigation-mobile-toggle-size;
+                width: $navigation-mobile-toggle-size;
+                border-radius: 100%;
+                position: relative;
+                cursor: pointer;
+
+                &:before {
+                    height: $navigation-mobile-toggle-size;
+                    width: $navigation-mobile-toggle-size;
+                    transition: all 0.6s ease;
+                    transform: scale(0.21);
+                    border-radius: 100%;
+                    position: absolute;
+                    background: $brand-primary;
+                    display: block;
+                    content: '';
+                }
+
+                &:after {
+                    left: ($navigation-mobile-toggle-size / 2);
+                    top: ($navigation-mobile-toggle-size / 2);
+                    box-shadow: 8px -4px 0 $brand-primary,
+                                -16px -4px 0 $brand-primary;
+                    transition: all 0.4s ease;
+                    border-radius: 100%;
+                    position: absolute;
+                    display: block;
+                    height: 8px;
+                    width: 8px;
+                    content: '';
+                    z-index: -1;
+                }
+
+                &.active {
+                    &:before {
+                        transform: scale(0.8);
+                        box-shadow: 0 2px 5px 0 transparentize($black, 0.84),
+                                    0 2px 9px 0 transparentize($black, 0.88);
+
+                        &:hover {
+                            box-shadow: 0 5px 11px 0 transparentize($black, 0.82),
+                                        0 4px 15px 0 transparentize($black, 0.85);
+                        }
+                    }
+
+                    &:after {
+                        box-shadow: 0 -4px 0 $brand-primary, 0 -4px 0 $brand-primary;
+                        opacity: 0.4;
+
+                        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=40)';
+                        filter: alpha(opacity = 40);
+                    }
+
+                    i {
+                        transform: rotate(45deg);
+                        filter: none;
+                        opacity: 1;
+                    }
+                }
+
+                i {
+                    transition: all 0.6s ease;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                    background: $white;
+                    display: block;
+                    height: 14px;
+                    width: 2px;
+                    opacity: 0;
+                    left: 19px;
+                    top: 13px;
+
+                    filter: alpha(opacity = 0);
+
+                    &:after {
+                        background: $white;
+                        position: absolute;
+                        display: block;
+                        content: '';
+                        width: 14px;
+                        height: 2px;
+                        left: -6px;
+                        top: 6px;
+                    }
+                }
+            }
+            .tap {
+                background-color: transparentize($brand-primary, 0.4);
+                transform: scale(0);
+                border-radius: 100%;
+                position: absolute;
+                display: block;
+                filter: none;
+                height: ($navigation-mobile-toggle-beat-size);
+                width: ($navigation-mobile-toggle-beat-size);
+                left: -($navigation-mobile-toggle-beat-size / 4);
+                top: -($navigation-mobile-toggle-beat-size / 4);
+                opacity: 1;
+
+                &.active {
+                    transition: all 0.3s ease-out;
+                    transform: scale(1);
+                    opacity: 0;
+
+                    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+                    filter: alpha(opacity = 0);
+                }
+            }
+        }
+
+        &-active {
+            .navigation-links {
+                background-color: $white;
+                text-align: center;
+                position: fixed;
+                display: block;
+                height: 100vh;
+                width: 100vw;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                top: $navigation-height;
+
+                &-services {
+                    &:not(:empty) {
+                        border-top: 1px solid $border-color;
+                        text-align: left;
+
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+
+                        li {
+                            @include aspect-ratio(1, 1);
+
+                            max-width: 120px;
+                            min-width: 85px;
+                            padding: 0;
+
+                            flex-basis: auto;
+                            flex-grow: 1;
+
+                            .content {
+                                margin: ($gutter / 2);
+                                border-radius: 6px;
+
+                                .icon {
+                                    transform: translate(50%, 25%);
+                                    position: absolute;
+                                    font-size: 2.25rem;
+                                    color: $white;
+                                    bottom: 50%;
+                                    right: 50%;
+                                }
+
+                                span {
+                                    transform: translateX(-50%);
+                                    bottom: ($gutter / 2);
+                                    position: absolute;
+                                    line-height: 1.5;
+                                    color: $white;
+                                    left: 50%;
+                                }
+
+                                // Adding Style to the Design Service Component
+                                // https://github.com/Forcir/design/issues/8
+                                &.design {
+                                    @include app-gradient($brand-primary);
+                                }
+
+                                &.patterns {
+                                    @include patterns(patterns, contain);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-left,
+                &-right {
+                    float: none;
+
+                    li {
+                        display: block;
+
+                        a {
+                            font-size: 1rem;
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
     }
 }
