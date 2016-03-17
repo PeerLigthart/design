@@ -127,7 +127,7 @@
                         transform: translate(50%, 50%);
                         position: absolute;
                         font-size: 32px;
-                        display: none;
+                        color: $white;
                         bottom: 50%;
                         right: 50%;
                     }
@@ -141,6 +141,8 @@
                         top: 45px;
                     }
 
+                    // Adding Style to the Design Service Component
+                    // https://github.com/Forcir/design/issues/8
                     &.design {
                         @include app-gradient($brand-primary);
                     }
@@ -208,6 +210,8 @@
                 font-size: 12px;
 
                 a {
+                    // Remove Focus State on Nav Links
+                    // https://github.com/Forcir/design/issues/1
                     &:focus {
                         border: 0;
                         outline: 0;
@@ -431,12 +435,14 @@
                                     left: 50%;
                                 }
 
-                                &.patterns {
-                                    @include patterns(patterns, contain);
-                                }
-
+                                // Adding Style to the Design Service Component
+                                // https://github.com/Forcir/design/issues/8
                                 &.design {
                                     @include app-gradient($brand-primary);
+                                }
+
+                                &.patterns {
+                                    @include patterns(patterns, contain);
                                 }
                             }
                         }
