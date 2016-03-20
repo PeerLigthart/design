@@ -1,44 +1,38 @@
-var body = $('body');
-
-popup = {
-
+gallery = {
     init: function() {
-        $('.gallery figure').click(function() {
-            popup.open($(this));
+        $('.gallery-image').click(function(e) {
+            var $this = $(this);
+
+            gallery.open($this);
+            return false;
         });
 
-        $(document).on('click', '.gallery-popup > img', function() {
-            return false;
-        }).on('click', '.gallery-popup', function() {
-            popup.close();
-        })
+        // Close Gallery Item if you click somewhere not on content.
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.gallery-popup-content').length) {
+                gallery.close();
+
+            // And then close it if you click the close element or any child thereof
+            } else if ($(event.target).closest('.gallery-close').length) {
+                gallery.close();
+            }
+        });
     },
 
-    open: function($figure) {
-        $('.gallery').addClass('pop');
-        $popup =            $('<div class="gallery-popup" />').appendTo($('body'));
-        $fig =              $figure.clone().appendTo($('.gallery-popup'));
-        $bg =               $('<div class="bg" />').appendTo($('.gallery-popup'));
-        $close =            $('<div class="close tooltipped tooltipped-w" aria-label="Close Modal"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>').appendTo($fig);
-        $shadow =           $('<div class="shadow" />').appendTo($fig);
-        src =               $('img', $fig).attr('src');
+    open: function(image) {
+        var body = $('body');
+        body.addClass('freeze blur').append('<div class="gallery-popup" />');
 
-        $shadow.css({backgroundImage: 'url(' + src + ')'});
-        $bg.css({backgroundImage: 'url(' + src + ')'});
-        body.addClass('freeze');
-
-        setTimeout(function() {
-            $('.gallery-popup').addClass('pop');
-        }, 10);
+        $('.gallery-popup').append('<div class="gallery-popup-content" />');
+        $('.gallery-popup-content').append('<img src="' + image.attr('src') + '" />').append('<i class="gallery-close" aria-label="Close Image"><i/></i>');
     },
 
     close: function() {
-        $('.gallery, .gallery-popup').removeClass('pop');
-        body.removeClass('freeze');
-        setTimeout(function(){
-            $('.gallery-popup').remove()
-        }, 100);
+        var body = $('body');
+
+        $('.gallery-popup').remove();
+        body.removeClass('freeze blur');
     }
 }
 
-popup.init();
+gallery.init();

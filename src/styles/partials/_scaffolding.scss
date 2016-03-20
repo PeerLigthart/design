@@ -18,9 +18,10 @@ button {
 
 body {
     font: #{$body-font-size}/1.4 $body-font;
-    color: $brand-gray-dark;
-    background-color: $white;
     backface-visibility: hidden;
+    background-color: $white;
+    transition: 0.175s ease;
+    color: $brand-gray-dark;
 
     .site-header ~ .site-content {
         padding-top: $gutter;
@@ -30,6 +31,16 @@ body {
         overflow: hidden;
         height: 100%;
         width: 100%;
+    }
+
+    &.blur {
+        .site-content {
+            filter: blur(50px);
+        }
+    }
+
+    .site-content {
+        transition: 0.175s ease;
     }
 }
 
