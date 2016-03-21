@@ -6,7 +6,12 @@
     }
 
     background-color: $background;
-    background-image: linear-gradient(lighten($background, 5%), $background);
+
+    @if $background != $button-default-bg {
+        background-image: linear-gradient(lighten($background, 15%), $background);
+    } @else {
+        background-image: linear-gradient(lighten($background, 5%), $background);
+    }
 
     &:focus {
         box-shadow: 0 0 5px $focus-box-shadow;
@@ -25,9 +30,14 @@
         text-decoration: none;
         border-color: darken($border, 5%);
         background-color: darken($background, 5%);
-        background-image: linear-gradient($background, darken($background, 5%));
+
+        @if $background != $button-default-bg {
+            background-image: linear-gradient(lighten($background, 5%), darken($background, 5%));
+        } @else {
+            background-image: linear-gradient($background, darken($background, 5%));
+        }
     }
-    //
+
     &:active,
     &.selected {
         background-image: none;

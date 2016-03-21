@@ -1,237 +1,64 @@
 .gallery {
+    &-image {
+        max-width: 100%;
+        cursor: pointer;
+    }
+
     &-grid {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
 
         &-item {
-            border-radius: 3px;
-            overflow: hidden;
-            flex-basis: 25%;
-            cursor: pointer;
-            padding: 10px;
             margin: 0;
-
-            img {
-                transition: all 0.3s ease-in-out;
-                border-radius: 3px;
-                width: 100%;
-            }
-
-            figcaption {
-                display: none;
-            }
+            padding: 0;
+            width: 150px;
         }
     }
+
     &-popup {
-        transition: opacity 0.5s ease-in-out 0.2s;
-        background: transparentize($white, 0.25);
+        background: transparentize($black, 0.2);
         position: fixed;
-        height: 100%;
-        width: 100%;
-        z-index: 2;
-        opacity: 0;
+        bottom: 0;
+        right: 0;
         left: 0;
         top: 0;
 
-        &.pop {
-            opacity: 1;
-            transition: opacity 0.2s ease-in-out 0s;
-
-            .gallery-grid-item {
-                margin-top: 0;
-                opacity: 1;
-            }
-        }
-
-        figure {
+        &-content {
+            box-shadow: 0 8px 13px transparentize($black, 0.64), 0 0 0 1px transparentize($black, 0.94);
             animation: galleryPopupOpen 500ms linear both;
-            transform: translate(-50%, -50%);
-            transform-origin: 0 0;
+            background-color: $white;
+            border-radius: 6px;
             position: absolute;
-            margin-top: 30px;
-            opacity: 0;
-            left: 50%;
-            top: 50%;
+            padding: ($gutter / 2);
+            max-height: 80%;
+            max-width: 90%;
+            bottom: 50%;
+            right: 50%;
 
-            > img {
-                // box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 6px 30px rgba(0, 0, 0, .4);
-                border-radius: 15px;
-                position: relative;
-                z-index: 2;
-            }
-
-            figcaption {
-                background: linear-gradient(180deg, transparentize($black, 1), transparentize($black, 0.22));
-                padding: 100px 20px 20px;
-                border-radius: 0 0 15px 15px;
-                position: absolute;
-                font-size: 32px;
-                bottom: 50px;
-                width: 100%;
-                color: $white;
-                z-index: 2;
-
-                small {
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    text-indent: 3px;
-                    margin-top: 12px;
-                    font-size: 11px;
-                    display: block;
-                    opacity: 0.7;
-                }
-            }
-        }
-
-        .close {
-            box-shadow: 0 0 3px transparentize($black, 0.8);
-            background: url('#close');
-            border-radius: 50%;
-            text-align: center;
-            position: absolute;
-            cursor: pointer;
-            height: 25px;
-            right: 10px;
-            width: 25px;
-            z-index: 3;
-            top: 10px;
-
-            svg,
             img {
-                height: 100%;
-                width: 100%;
+                position: relative;
+                max-width: 100%;
+                display: block;
             }
         }
     }
-}
 
-// .gallery {
-//     z-index: 2;
-//     padding: 10px;
-//     display: flex;
-//     position: relative;
-//     flex-flow: row wrap;
-//     justify-content: space-between;
-//     transition: all .5s ease-in-out;
-//
-//     &.pop {
-//         filter: blur(10px);
-//     }
-//
-//     figure {
-//         border-radius: 3px;
-//         overflow: hidden;
-//         flex-basis: 25%;
-//         cursor: pointer;
-//         padding: 10px;
-//         margin: 0;
-//
-//         img {
-//             transition: all .3s ease-in-out;
-//             border-radius: 3px;
-//             width: 100%;
-//         }
-//
-//         figcaption {
-//             display: none;
-//         }
-//
-//     }
-// }
-//
-// .popup {
-//     position: fixed;
-//     z-index: 2;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: rgba(255, 255, 255, 0.75);
-//     opacity: 0;
-//     transition: opacity .5s ease-in-out .2s;
-//
-//
-//     &.pop {
-//         opacity: 1;
-//         transition: opacity .2s ease-in-out 0s;
-//
-//         figure {
-//             margin-top: 0;
-//             opacity: 1;
-//         }
-//     }
-//
-//     figure {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         transform-origin: 0 0;
-//         margin-top: 30px;
-//         opacity: 0;
-//         animation: galleryPopupOpen 500ms linear both;
-//
-//         > img {
-//             position: relative;
-//             z-index: 2;
-//             border-radius: 15px;
-//             box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 6px 30px rgba(0, 0, 0, .4);
-//         }
-//
-//         figcaption {
-//             position: absolute;
-//             bottom: 50px;
-//             background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.78));
-//             z-index: 2;
-//             width: 100%;
-//             border-radius: 0 0 15px 15px;
-//             padding: 100px 20px 20px 20px;
-//             color: #fff;
-//             font-size: 32px;
-//
-//             small {
-//                 font-size: 11px;
-//                 display: block;
-//                 text-transform: uppercase;
-//                 margin-top: 12px;
-//                 text-indent: 3px;
-//                 opacity: .7;
-//                 letter-spacing: 1px;
-//             }
-//         }
-//
-//         .shadow {
-//             position: relative;
-//             z-index: 1;
-//             top: -15px;
-//             margin: 0 auto;
-//             background-position: center bottom;
-//             background-repeat: no-repeat;
-//             width: 98%;
-//             height: 50px;
-//             opacity: .6;
-//             filter: blur(15px) contrast(2);
-//         }
-//     }
-//
-//     .close {
-//         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-//         background: url(#close);
-//         border-radius: 50%;
-//         text-align: center;
-//         position: absolute;
-//         cursor: pointer;
-//         height: 25px;
-//         right: 10px;
-//         width: 25px;
-//         z-index: 3;
-//         top: 10px;
-//
-//         svg,
-//         img {
-//             height: 100%;
-//             width: 100%;
-//         }
-//     }
-// }
+    &-close {
+        @extend .tooltipped;
+        @extend .tooltipped-w;
+
+        position: absolute;
+        cursor: pointer;
+        color: $white;
+        top: -30px;
+        right: 0;
+
+        i {
+            @extend .icon;
+            @extend .icon-x;
+
+            font-size: 24px;
+        }
+    }
+}
