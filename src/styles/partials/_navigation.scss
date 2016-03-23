@@ -48,7 +48,7 @@
 
         &-link,
         &-link:link {
-            color: transparentize($black, 0.5);
+            color: transparentize($black, 0.35);
             text-transform: lowercase;
             transition: 0.175s ease;
             margin: 14.28571px 0;
@@ -67,7 +67,7 @@
             line-height: $navigation-height;
             margin-right: ($gutter / 2);
             margin-left: ($gutter / 3);
-            text-transform: uppercase;
+            text-transform: lowercase;
             color: $brand-gray-light;
             text-decoration: none;
             position: relative;
@@ -133,10 +133,11 @@
                     }
 
                     span {
+                        color: transparentize($black, 0.5);
                         transform: translateX(-50%);
                         position: absolute;
+                        font-weight: 700;
                         font-size: 11px;
-                        color: $black;
                         left: 50%;
                         top: 45px;
                     }
