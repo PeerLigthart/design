@@ -23,6 +23,8 @@ body {
     transition: 0.175s ease;
     color: $brand-gray-dark;
 
+    -webkit-font-smoothing: subpixel-antialiased;
+
     .site-header ~ .site-content {
         padding-top: $gutter;
     }
@@ -37,6 +39,10 @@ body {
         .site-content {
             filter: blur(50px);
         }
+    }
+
+    &.contrast {
+        background-color: $body-bg-contrast;
     }
 
     .site-content {

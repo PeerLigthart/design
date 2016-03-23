@@ -57,7 +57,7 @@ $body-font:                                     'ForcirType A', 'ForcirType B', 
 // The base body properties
 $body-font-size:                                13px !default;
 $body-bg:                                       $white !default;
-$body-bg-contrast:                                 #e9eaed !default;
+$body-bg-contrast:                              #eceeef !default;
 
 // Monospace font stack
 $mono-font:                                     Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
@@ -104,6 +104,19 @@ $status-reverted:                               $status-closed;
 $status-merged:                                 $brand-purple;
 $status-renamed:                                #fffa5d;
 $status-pending:                                #cea61b;
+
+$multiline-max-width:                           250px;
+$tooltip-background-color:                      transparentize($black, 0.2);
+$tooltip-text-color:                            $white;
+
+$tooltip-success-background-color:              darken($brand-green, 5%);
+$tooltip-success-text-color:                    $white;
+
+$tooltip-error-background-color:                $brand-red;
+$tooltip-error-text-color:                      $white;
+
+$tooltip-warning-background-color:              $status-renamed;
+$tooltip-warning-text-color:                    $black;
 
 // Repository type colors
 $repo-private-text:                             #a1882b;
