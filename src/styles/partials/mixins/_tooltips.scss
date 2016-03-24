@@ -1,0 +1,30 @@
+@mixin colorize-tooltip($text-color, $background-color) {
+    &::after {
+        color: $text-color !important;
+        background: $background-color !important;
+    }
+
+    &.tooltipped-s,
+    &.tooltipped-se,
+    &.tooltipped-sw {
+        &::before {
+            border-bottom-color: $background-color !important;
+        }
+    }
+
+    &.tooltipped-n,
+    &.tooltipped-ne,
+    &.tooltipped-nw {
+        &::before {
+            border-top-color: $background-color !important;
+        }
+    }
+
+    &.tooltipped-e::before {
+        border-right-color: $background-color !important;
+    }
+
+    &.tooltipped-w::before {
+        border-left-color: $background-color !important;
+    }
+}
