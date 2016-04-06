@@ -6,14 +6,17 @@
 @import 'partials/typography';
 @import 'partials/utilities';
 @import 'partials/layout';
+@import 'partials/syntax';
 @import 'partials/font';
 @import 'partials/forms';
 @import 'partials/form-controls';
+@import 'partials/form-select';
 @import 'partials/flex-table';
 @import 'partials/alerts';
 @import 'partials/tooltips';
 @import 'partials/bargraph';
 @import 'partials/loader';
+@import 'partials/header';
 @import 'partials/flags';
 @import 'partials/icons';
 @import 'partials/gallery';
@@ -22,6 +25,7 @@
 @import 'partials/fixedsticky';
 @import 'partials/navigation';
 @import 'partials/buttons';
+@import 'partials/tags';
 
 // Comment Out to Ignore Documentation Extras
 @import 'partials/docs';

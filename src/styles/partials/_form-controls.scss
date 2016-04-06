@@ -1,4 +1,5 @@
 .field-wrapper {
+    display: flex;
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -13,7 +14,7 @@
         opacity: 0;
         font-weight: bold;
 
-        &.on {
+        &.is-on {
             color: $brand-primary;
         }
 
@@ -37,7 +38,7 @@
             }
         }
 
-        &.show {
+        &.is-shown {
             top: -15px;
             opacity: 1;
         }
@@ -52,4 +53,216 @@
             border-left: 3px solid $brand-primary;
         }
     }
+
+    &.field-group {
+        .form-control,
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="url"] {
+            border-right: 0;
+            border-radius: 3px 0 0 3px;
+
+            &:focus ~ button {
+                border-left: 1px solid $focus-border-color;
+            }
+        }
+
+        button {
+            box-shadow: none;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+
+    &.is-valid {
+        position: relative;
+
+        label {
+            &,
+            &.is-on {
+                color: darken($brand-green, 5%);
+            }
+        }
+
+        .form-control,
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="url"],
+        select,
+        textarea {
+            background-size: 16px 16px;
+            background-image: url('../img/form-controls/valid-check-circle.svg');
+        }
+    }
+
+    &.is-invalid {
+        position: relative;
+
+        label {
+            &,
+            &.is-on {
+                color: darken($brand-red, 5%);
+            }
+        }
+
+        .form-control,
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="url"],
+        select,
+        textarea {
+            background-size: 16px 16px;
+            background-image: url('../img/form-controls/invalid-x-circle.svg');
+        }
+    }
+
+    &.show-card {
+        position: relative;
+
+        &::after {
+            top: 50%;
+            right: 32px;
+            width: 26px;
+            height: 26px;
+            content: '';
+            position: absolute;
+            transform: translateY(-50%);
+        }
+
+        &-amex {
+            label {
+                &::after {
+                    content: ' (Amex)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/amex.svg');
+            }
+        }
+
+        &-dinersclub {
+            label {
+                &::after {
+                    content: ' (Diners Club)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/dinersclub.svg');
+            }
+        }
+
+        &-discover {
+            label {
+                &::after {
+                    content: ' (Discover)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/discover.svg');
+            }
+        }
+
+        &-jcb {
+            label {
+                &::after {
+                    content: ' (JCB)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/jcb.svg');
+            }
+        }
+
+        &-mastercard {
+            label {
+                &::after {
+                    content: ' (Mastercard)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/mastercard.svg');
+            }
+        }
+
+        &-maestro {
+            label {
+                &::after {
+                    content: ' (Maestro)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/maestro.svg');
+            }
+        }
+
+        &-visa {
+            label {
+                &::after {
+                    content: ' (Visa)';
+                }
+            }
+
+            &::after {
+                background-size: 26px 26px;
+                background-image: url('../img/payment-options/visa.svg');
+            }
+        }
+    }
+}
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+    min-height: 34px;
+    padding: 7px 8px;
+    font-size: 13px;
+    color: $brand-gray-dark;
+    vertical-align: middle;
+    background-color: $white;
+    background-repeat: no-repeat; // Repeat and position set for form states (success, error, etc)
+    background-position: right 8px center; // For form validation. This keeps images 8px from right and centered vertically.
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    outline: none;
+
+    &.focus,
+    &:focus {
+        border-color: $focus-border-color;
+    }
+}
+
+select {
+    height: 34px;
+}
+
+textarea {
+    width: 100%;
+    display: block;
+    resize: vertical;
 }

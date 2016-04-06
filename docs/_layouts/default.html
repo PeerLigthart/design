@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="docs">
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <div class="site-content">
+        <div class="content-container container">
+            <div class="columns">
+                <main class="site-content-main column two-thirds">
+                    {{ content }}
+                </main>
+                <aside class="site-content-sidebar-container column one-third">
+                    <ul class="site-content-sidebar">
+                        <li>
+                            <a class="page-link" href="/">Home</a>
+                        </li>
+                        {% for node in site.pages %}
+                            {% if node.title %}
+                                {% if page.url == node.url %}
+                                    <li class="current">
+                                        <a href="{{node.url}}">{{node.title}}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{node.url}}">{{node.title}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+    <div class="site-extras">
+        <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
+    </div>
+</body>
+</html>

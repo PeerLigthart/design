@@ -13,8 +13,10 @@ var config = {
     sassPath:                       './src/styles',
     imgPath:                        './src/images',
     jsPath:                         './src/scripts',
+    fontPath:                       './src/fonts',
 
-    assetsFolderName:               'dist'
+    assetsFolderName:               'dist',
+    docsFolderName:                 'docs'
 }
 
 var concat = require('gulp-concat');
@@ -24,7 +26,8 @@ gulp.task('scripts', function() {
         config.jsPath + '/partials/*.js'
     ])
     .pipe(concat('script.js')).pipe(uglify())
-    .pipe(gulp.dest('./' + config.assetsFolderName + '/js/'));
+    .pipe(gulp.dest('./' + config.assetsFolderName + '/js/'))
+    .pipe(gulp.dest('./' + config.docsFolderName + '/js/'));
 });
 
 gulp.task('scripts-vendor', function() {
@@ -33,13 +36,15 @@ gulp.task('scripts-vendor', function() {
         config.jsPath + '/vendor/browser.js',
         config.jsPath + '/vendor/fixedsticky.js',
         config.jsPath + '/vendor/sort.js',
+        config.jsPath + '/vendor/select2.js',
         config.jsPath + '/vendor/countUp.js',
         config.jsPath + '/vendor/jquery.caret.js',
         config.jsPath + '/vendor/jquery.payment.js',
         config.jsPath + '/vendor/jquery.mobilePhoneNumber.js'
     ])
     .pipe(concat('vendor.js')).pipe(uglify())
-    .pipe(gulp.dest('./' + config.assetsFolderName + '/js/'));
+    .pipe(gulp.dest('./' + config.assetsFolderName + '/js/'))
+    .pipe(gulp.dest('./' + config.docsFolderName + '/js/'));
 });
 
 gulp.task('styles', function() {
@@ -49,12 +54,20 @@ gulp.task('styles', function() {
     .pipe(autoprefixer())
     .pipe(cssnano())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./' + config.assetsFolderName + '/css/'));
+    .pipe(gulp.dest('./' + config.assetsFolderName + '/css/'))
+    .pipe(gulp.dest('./' + config.docsFolderName + '/css/'));
 });
 
 gulp.task('images', function() {
-    return gulp.src(config.imgPath + '/*')
-    .pipe(gulp.dest('./' + config.assetsFolderName + '/img/'));
+    return gulp.src(config.imgPath + '/**/*')
+    .pipe(gulp.dest('./' + config.assetsFolderName + '/img/'))
+    .pipe(gulp.dest('./' + config.docsFolderName + '/img/'));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src(config.fontPath + '/**/*')
+    .pipe(gulp.dest('./' + config.assetsFolderName + '/fonts/'))
+    .pipe(gulp.dest('./' + config.docsFolderName + '/fonts/'));
 });
 
 // Rerun the task when a file changes
@@ -64,5 +77,5 @@ gulp.task('watch', function() {
     gulp.watch(config.jsPath + '/**/*.js', ['scripts']);
 });
 
-gulp.task('default', ['styles', 'scripts', 'scripts-vendor', 'images', 'watch']);
-gulp.task('build', ['styles', 'scripts', 'scripts-vendor', 'images']);
+gulp.task('default', ['styles', 'scripts', 'scripts-vendor', 'images', 'fonts', 'watch']);
+gulp.task('build', ['styles', 'scripts', 'scripts-vendor', 'images', 'fonts']);

@@ -1,0 +1,8 @@
+@mixin nofocus() {
+    &:focus,
+    &:active {
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+    }
+}

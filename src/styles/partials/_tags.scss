@@ -1,0 +1,628 @@
+//scss-lint:disable ColorVariable
+.tag-container {
+    @include clearfix;
+
+    .tag,
+    .tag:link {
+        float: left;
+        padding: 0 12px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        position: relative;
+        border-radius: 2px;
+        margin: 3px 3px 0 0;
+        background: #406abf;
+        white-space: nowrap;
+        display: inline-block;
+        color: $white-contrast;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $white;
+            background: #477eeb;
+        }
+
+        &:nth-child(1) {
+            background: #bf4440;
+            &:hover {
+                background: #eb4d47;
+            }
+        }
+        &:nth-child(2) {
+            background: #bf4940;
+            &:hover {
+                background: #eb5347;
+            }
+        }
+        &:nth-child(3) {
+            background: #bf4e40;
+            &:hover {
+                background: #eb5947;
+            }
+        }
+        &:nth-child(4) {
+            background: #bf5240;
+            &:hover {
+                background: #eb5f47;
+            }
+        }
+        &:nth-child(5) {
+            background: #bf5740;
+            &:hover {
+                background: #eb6547;
+            }
+        }
+        &:nth-child(6) {
+            background: #bf5c40;
+            &:hover {
+                background: #eb6b47;
+            }
+        }
+        &:nth-child(7) {
+            background: #bf6040;
+            &:hover {
+                background: #eb7147;
+            }
+        }
+        &:nth-child(8) {
+            background: #bf6540;
+            &:hover {
+                background: #eb7747;
+            }
+        }
+        &:nth-child(9) {
+            background: #bf6a40;
+            &:hover {
+                background: #eb7d47;
+            }
+        }
+        &:nth-child(10) {
+            background: #bf6f40;
+            &:hover {
+                background: #eb8347;
+            }
+        }
+        &:nth-child(11) {
+            background: #bf7340;
+            &:hover {
+                background: #eb8947;
+            }
+        }
+        &:nth-child(12) {
+            background: #bf7840;
+            &:hover {
+                background: #eb8f47;
+            }
+        }
+        &:nth-child(13) {
+            background: #bf7d40;
+            &:hover {
+                background: #eb9547;
+            }
+        }
+        &:nth-child(14) {
+            background: #bf8140;
+            &:hover {
+                background: #eb9b47;
+            }
+        }
+        &:nth-child(15) {
+            background: #bf8640;
+            &:hover {
+                background: #eba147;
+            }
+        }
+        &:nth-child(16) {
+            background: #bf8b40;
+            &:hover {
+                background: #eba747;
+            }
+        }
+        &:nth-child(17) {
+            background: #bf8f40;
+            &:hover {
+                background: #ebad47;
+            }
+        }
+        &:nth-child(18) {
+            background: #bf9440;
+            &:hover {
+                background: #ebb347;
+            }
+        }
+        &:nth-child(19) {
+            background: #bf9940;
+            &:hover {
+                background: #ebb947;
+            }
+        }
+        &:nth-child(20) {
+            background: #bf9d40;
+            &:hover {
+                background: #ebbf47;
+            }
+        }
+        &:nth-child(21) {
+            background: #bfa240;
+            &:hover {
+                background: #ebc547;
+            }
+        }
+        &:nth-child(22) {
+            background: #bfa740;
+            &:hover {
+                background: #ebcb47;
+            }
+        }
+        &:nth-child(23) {
+            background: #bfab40;
+            &:hover {
+                background: #ebd147;
+            }
+        }
+        &:nth-child(24) {
+            background: #bfb040;
+            &:hover {
+                background: #ebd747;
+            }
+        }
+        &:nth-child(25) {
+            background: #bfb540;
+            &:hover {
+                background: #ebdd47;
+            }
+        }
+        &:nth-child(26) {
+            background: #bfb940;
+            &:hover {
+                background: #ebe347;
+            }
+        }
+        &:nth-child(27) {
+            background: #bfbe40;
+            &:hover {
+                background: #ebe947;
+            }
+        }
+        &:nth-child(28) {
+            background: #bcbf40;
+            &:hover {
+                background: #e6eb47;
+            }
+        }
+        &:nth-child(29) {
+            background: #b7bf40;
+            &:hover {
+                background: #e0eb47;
+            }
+        }
+        &:nth-child(30) {
+            background: #b3bf40;
+            &:hover {
+                background: #daeb47;
+            }
+        }
+        &:nth-child(31) {
+            background: #aebf40;
+            &:hover {
+                background: #d4eb47;
+            }
+        }
+        &:nth-child(32) {
+            background: #a9bf40;
+            &:hover {
+                background: #ceeb47;
+            }
+        }
+        &:nth-child(33) {
+            background: #a4bf40;
+            &:hover {
+                background: #c8eb47;
+            }
+        }
+        &:nth-child(34) {
+            background: #a0bf40;
+            &:hover {
+                background: #c2eb47;
+            }
+        }
+        &:nth-child(35) {
+            background: #9bbf40;
+            &:hover {
+                background: #bceb47;
+            }
+        }
+        &:nth-child(36) {
+            background: #96bf40;
+            &:hover {
+                background: #b6eb47;
+            }
+        }
+        &:nth-child(37) {
+            background: #92bf40;
+            &:hover {
+                background: #b0eb47;
+            }
+        }
+        &:nth-child(38) {
+            background: #8dbf40;
+            &:hover {
+                background: #aaeb47;
+            }
+        }
+        &:nth-child(39) {
+            background: #88bf40;
+            &:hover {
+                background: #a4eb47;
+            }
+        }
+        &:nth-child(40) {
+            background: #84bf40;
+            &:hover {
+                background: #9eeb47;
+            }
+        }
+        &:nth-child(41) {
+            background: #7fbf40;
+            &:hover {
+                background: #98eb47;
+            }
+        }
+        &:nth-child(42) {
+            background: #7abf40;
+            &:hover {
+                background: #92eb47;
+            }
+        }
+        &:nth-child(43) {
+            background: #76bf40;
+            &:hover {
+                background: #8ceb47;
+            }
+        }
+        &:nth-child(44) {
+            background: #71bf40;
+            &:hover {
+                background: #87eb47;
+            }
+        }
+        &:nth-child(45) {
+            background: #6cbf40;
+            &:hover {
+                background: #81eb47;
+            }
+        }
+        &:nth-child(46) {
+            background: #68bf40;
+            &:hover {
+                background: #7beb47;
+            }
+        }
+        &:nth-child(47) {
+            background: #63bf40;
+            &:hover {
+                background: #75eb47;
+            }
+        }
+        &:nth-child(48) {
+            background: #5ebf40;
+            &:hover {
+                background: #6feb47;
+            }
+        }
+        &:nth-child(49) {
+            background: #5abf40;
+            &:hover {
+                background: #69eb47;
+            }
+        }
+        &:nth-child(50) {
+            background: #55bf40;
+            &:hover {
+                background: #63eb47;
+            }
+        }
+        &:nth-child(51) {
+            background: #50bf40;
+            &:hover {
+                background: #5deb47;
+            }
+        }
+        &:nth-child(52) {
+            background: #4cbf40;
+            &:hover {
+                background: #57eb47;
+            }
+        }
+        &:nth-child(53) {
+            background: #47bf40;
+            &:hover {
+                background: #51eb47;
+            }
+        }
+        &:nth-child(54) {
+            background: #42bf40;
+            &:hover {
+                background: #4beb47;
+            }
+        }
+        &:nth-child(55) {
+            background: #40bf42;
+            &:hover {
+                background: #47eb4a;
+            }
+        }
+        &:nth-child(56) {
+            background: #40bf47;
+            &:hover {
+                background: #47eb50;
+            }
+        }
+        &:nth-child(57) {
+            background: #40bf4b;
+            &:hover {
+                background: #47eb56;
+            }
+        }
+        &:nth-child(58) {
+            background: #40bf50;
+            &:hover {
+                background: #47eb5c;
+            }
+        }
+        &:nth-child(59) {
+            background: #40bf55;
+            &:hover {
+                background: #47eb62;
+            }
+        }
+        &:nth-child(60) {
+            background: #40bf59;
+            &:hover {
+                background: #47eb68;
+            }
+        }
+        &:nth-child(61) {
+            background: #40bf5e;
+            &:hover {
+                background: #47eb6e;
+            }
+        }
+        &:nth-child(62) {
+            background: #40bf63;
+            &:hover {
+                background: #47eb74;
+            }
+        }
+        &:nth-child(63) {
+            background: #40bf67;
+            &:hover {
+                background: #47eb7a;
+            }
+        }
+        &:nth-child(64) {
+            background: #40bf6c;
+            &:hover {
+                background: #47eb80;
+            }
+        }
+        &:nth-child(65) {
+            background: #40bf71;
+            &:hover {
+                background: #47eb86;
+            }
+        }
+        &:nth-child(66) {
+            background: #40bf75;
+            &:hover {
+                background: #47eb8c;
+            }
+        }
+        &:nth-child(67) {
+            background: #40bf7a;
+            &:hover {
+                background: #47eb92;
+            }
+        }
+        &:nth-child(68) {
+            background: #40bf7f;
+            &:hover {
+                background: #47eb98;
+            }
+        }
+        &:nth-child(69) {
+            background: #40bf83;
+            &:hover {
+                background: #47eb9e;
+            }
+        }
+        &:nth-child(70) {
+            background: #40bf88;
+            &:hover {
+                background: #47eba4;
+            }
+        }
+        &:nth-child(71) {
+            background: #40bf8d;
+            &:hover {
+                background: #47ebaa;
+            }
+        }
+        &:nth-child(72) {
+            background: #40bf91;
+            &:hover {
+                background: #47ebb0;
+            }
+        }
+        &:nth-child(73) {
+            background: #40bf96;
+            &:hover {
+                background: #47ebb6;
+            }
+        }
+        &:nth-child(74) {
+            background: #40bf9b;
+            &:hover {
+                background: #47ebbc;
+            }
+        }
+        &:nth-child(75) {
+            background: #40bf9f;
+            &:hover {
+                background: #47ebc2;
+            }
+        }
+        &:nth-child(76) {
+            background: #40bfa4;
+            &:hover {
+                background: #47ebc8;
+            }
+        }
+        &:nth-child(77) {
+            background: #40bfa9;
+            &:hover {
+                background: #47ebce;
+            }
+        }
+        &:nth-child(78) {
+            background: #40bfad;
+            &:hover {
+                background: #47ebd4;
+            }
+        }
+        &:nth-child(79) {
+            background: #40bfb2;
+            &:hover {
+                background: #47ebda;
+            }
+        }
+        &:nth-child(80) {
+            background: #40bfb7;
+            &:hover {
+                background: #47ebe0;
+            }
+        }
+        &:nth-child(81) {
+            background: #40bfbb;
+            &:hover {
+                background: #47ebe6;
+            }
+        }
+        &:nth-child(82) {
+            background: #40bebf;
+            &:hover {
+                background: #47eaeb;
+            }
+        }
+        &:nth-child(83) {
+            background: #40babf;
+            &:hover {
+                background: #47e4eb;
+            }
+        }
+        &:nth-child(84) {
+            background: #40b5bf;
+            &:hover {
+                background: #47deeb;
+            }
+        }
+        &:nth-child(85) {
+            background: #40b0bf;
+            &:hover {
+                background: #47d8eb;
+            }
+        }
+        &:nth-child(86) {
+            background: #40acbf;
+            &:hover {
+                background: #47d2eb;
+            }
+        }
+        &:nth-child(87) {
+            background: #40a7bf;
+            &:hover {
+                background: #47cceb;
+            }
+        }
+        &:nth-child(88) {
+            background: #40a2bf;
+            &:hover {
+                background: #47c6eb;
+            }
+        }
+        &:nth-child(89) {
+            background: #409ebf;
+            &:hover {
+                background: #47c0eb;
+            }
+        }
+        &:nth-child(90) {
+            background: #4099bf;
+            &:hover {
+                background: #47baeb;
+            }
+        }
+        &:nth-child(91) {
+            background: #4094bf;
+            &:hover {
+                background: #47b4eb;
+            }
+        }
+        &:nth-child(92) {
+            background: #4090bf;
+            &:hover {
+                background: #47aeeb;
+            }
+        }
+        &:nth-child(93) {
+            background: #408bbf;
+            &:hover {
+                background: #47a8eb;
+            }
+        }
+        &:nth-child(94) {
+            background: #4086bf;
+            &:hover {
+                background: #47a2eb;
+            }
+        }
+        &:nth-child(95) {
+            background: #4082bf;
+            &:hover {
+                background: #479ceb;
+            }
+        }
+        &:nth-child(96) {
+            background: #407dbf;
+            &:hover {
+                background: #4796eb;
+            }
+        }
+        &:nth-child(97) {
+            background: #4078bf;
+            &:hover {
+                background: #4790eb;
+            }
+        }
+        &:nth-child(98) {
+            background: #4074bf;
+            &:hover {
+                background: #478aeb;
+            }
+        }
+        &:nth-child(99) {
+            background: #406fbf;
+            &:hover {
+                background: #4784eb;
+            }
+        }
+        &:nth-child(100) {
+            background: #406abf;
+            &:hover {
+                background: #477eeb;
+            }
+        }
+    }
+}

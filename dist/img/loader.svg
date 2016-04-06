@@ -1,0 +1,7 @@
+<svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48">
+<g transform="translate(0, 0)">
+<circle opacity="0.4" fill="none" stroke="#0f0f0f" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" cx="24" cy="24" r="22" stroke-linejoin="miter"></circle>
+<path class="nc-circle-03-linear" data-cap="butt" data-color="color-2" fill="none" stroke="#0f0f0f" stroke-width="2" stroke-miterlimit="10" d="M24,2c12.2,0,22,9.8,22,22" stroke-linejoin="miter" stroke-linecap="butt" transform="rotate(317.3685714389597 24 24)"></path>
+</g>
+<script transform="translate(0, 0)">function stepCircleThreeLinX(t){startxCircle8||(startxCircle8=t);var e=t-startxCircle8,n=Math.min(e/1.4,360);504&gt;e||(startxCircle8+=504);if(pathx[0]){window.requestAnimationFrame(stepCircleThreeLinX);for(j = 0;  pathxNumber &gt; j ; j++){pathx[j].setAttribute("transform","rotate("+n+" 24 24)")}}}!function(){var t=0;window.requestAnimationFrame||(window.requestAnimationFrame=function(e){var n=(new Date).getTime(),r=Math.max(0,16-(n-t)),i=window.setTimeout(function(){e(n+r)},r);return t=n+r,i})}();var pathx=document.getElementsByClassName("nc-circle-03-linear"),startxCircle8=null,pathxNumber = pathx.length;window.requestAnimationFrame(stepCircleThreeLinX);</script>
+</svg>

@@ -17,7 +17,8 @@
         position: relative;
     }
 
-    &-fixed {
+    &-fixed,
+    &-fixed-top {
         border-bottom: $navigation-fixed-border-height solid $navigation-fixed-border-color;
         height: $navigation-fixed-height;
         transform: translateY(-100%);
@@ -51,7 +52,7 @@
             color: transparentize($black, 0.35);
             text-transform: lowercase;
             transition: 0.175s ease;
-            margin: 14.28571px 0;
+            margin: ($navigation-fixed-height / 3.6) 0;
             line-height: 20px;
             font-weight: 500;
             font-size: 24px;
@@ -149,7 +150,7 @@
                     }
 
                     &.patterns {
-                        @include patterns(patterns, cover);
+                        @include pattern(patterns, cover);
                     }
                 }
 
@@ -358,6 +359,7 @@
                     }
                 }
             }
+
             .tap {
                 background-color: transparentize($brand-primary, 0.4);
                 transform: scale(0);
@@ -443,7 +445,7 @@
                                 }
 
                                 &.patterns {
-                                    @include patterns(patterns, contain);
+                                    @include pattern(patterns, contain);
                                 }
                             }
                         }

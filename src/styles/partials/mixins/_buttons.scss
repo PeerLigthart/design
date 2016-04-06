@@ -1,70 +1,81 @@
 @mixin button($color: $button-default-color, $background: $button-default-bg, $border: $button-default-border, $shadow: true) {
-    color: $color;
-    border-color: $border;
-    @if $shadow {
-        text-shadow: 0 -1px 0 transparentize($black, 0.75);
-    }
+    &,
+    &:link {
+        color: $color;
+        border-color: $border;
+        @if $shadow {
+            text-shadow: 0 -1px 0 transparentize($black, 0.75);
+        }
 
-    background-color: $background;
-
-    @if $background != $button-default-bg {
-        background-image: linear-gradient(lighten($background, 15%), $background);
-    } @else {
-        background-image: linear-gradient(lighten($background, 5%), $background);
-    }
-
-    &:focus {
-        box-shadow: 0 0 5px $focus-box-shadow;
-        text-decoration: none;
-        border-color: $focus-border-color;
-        outline: none;
-    }
-
-    &:focus:hover,
-    &.selected:focus {
-        border-color: $focus-border-color;
-    }
-
-    &:hover,
-    &:active {
-        text-decoration: none;
-        border-color: darken($border, 5%);
-        background-color: darken($background, 5%);
+        background-color: $background;
 
         @if $background != $button-default-bg {
-            background-image: linear-gradient(lighten($background, 5%), darken($background, 5%));
+            background-image: linear-gradient(lighten($background, 15%), $background);
+            box-shadow: inset 0 1px 2px 0 transparentize($white, 0.85),
+                              0 1px 1px transparentize($black, 0.8),
+                              0 2px 1px transparentize($black, 0.95);
         } @else {
-            background-image: linear-gradient($background, darken($background, 5%));
+            background-image: linear-gradient(lighten($background, 5%), $background);
+            box-shadow: inset 0 1px 2px 0 transparentize($white, 0.95),
+                              0 1px 1px transparentize($black, 0.9),
+                              0 2px 1px transparentize($black, 0.95);
         }
-    }
 
-    &:active,
-    &.selected {
-        background-image: none;
-        border-color: darken($border, 10%);
-        background-color: darken($background, 10%);
-        box-shadow: inset 0 2px 4px transparentize($black, 0.85);
-    }
+        &:focus {
+            box-shadow: 0 0 5px $focus-box-shadow;
+            text-decoration: none;
+            border-color: $focus-border-color;
+            outline: none;
+        }
 
-    &.selected:hover {
-        background-color: darken($background, 10%);
-    }
+        &:focus:hover,
+        &.selected:focus {
+            border-color: $focus-border-color;
+        }
 
-    &:disabled,
-    &.disabled {
-        &,
         &:hover,
-        &:active {
-            cursor: default;
-            box-shadow: none;
-            color: transparentize($color, 0.5);
-            @if $shadow {
-                text-shadow: 0 -1px 0 transparentize($black, 0.85);
+        &:active,
+        &:hover:link {
+            color: $color;
+            text-decoration: none;
+            border-color: darken($border, 5%);
+            background-color: darken($background, 5%);
+
+            @if $background != $button-default-bg {
+                background-image: linear-gradient(lighten($background, 5%), darken($background, 5%));
+            } @else {
+                background-image: linear-gradient($background, darken($background, 5%));
             }
-            background-color: transparentize($background, 0.5);
-            background-image: linear-gradient(transparentize($background, 0.5), transparentize(darken($background, 10%), 0.5));
-            border-color: transparentize($border, 0.75);
-            border-bottom-color: transparentize($border, 0.35);
+        }
+
+        &:active,
+        &.selected {
+            background-image: none;
+            border-color: darken($border, 10%);
+            background-color: darken($background, 10%);
+            box-shadow: inset 0 2px 4px transparentize($black, 0.85);
+        }
+
+        &.selected:hover {
+            background-color: darken($background, 10%);
+        }
+
+        &:disabled,
+        &.disabled {
+            &,
+            &:hover,
+            &:active {
+                cursor: default;
+                box-shadow: none;
+                color: transparentize($color, 0.5);
+                @if $shadow {
+                    text-shadow: 0 -1px 0 transparentize($black, 0.85);
+                }
+                background-color: transparentize($background, 0.5);
+                background-image: linear-gradient(transparentize($background, 0.5), transparentize(darken($background, 10%), 0.5));
+                border-color: transparentize($border, 0.75);
+                border-bottom-color: transparentize($border, 0.35);
+            }
         }
     }
 }

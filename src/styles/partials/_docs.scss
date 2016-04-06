@@ -1,171 +1,151 @@
 // Styles for the Demo/Example Pages
 
-body {
+html.docs {
     min-height: 150vh;
 
-    &.examples {
+    body {
+        background-color: $body-bg;
+    }
 
-        .doc-menu {
-            @extend .one-fourth;
-            @include remove-list-defaults();
+    .content-container {
+        min-height: 400px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        padding: ($gutter / 2);
+        background: $body-bg;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-            transform: translate(50%, 50%);
-            position: fixed;
-            bottom: 50%;
-            right: calc(50% - 419px);
+        .docs-page {
+            @include clearfix();
 
-            display: none;
-        }
+            &-header {
+                margin: -11px -10px 10px;
+                border-bottom: 1px solid $border-color;
 
-        #section-patterns {
-            .pattern-block {
-                @include patterns(patterns);
-                height: 150px;
-                width: 150px;
-            }
-        }
-
-        #section-icons {
-            .doc-item {
-                @include clearfix();
-                text-align: center;
-
-                .tooltipped {
-                    margin-bottom: ($gutter);
-                    float: left;
-                    width: 10%;
-
-                    .icon {
-                        transition: 0.245s ease-in-out;
-                        font-size: 24px;
-                    }
-
-                    &:hover {
-                        .icon {
-                            transform: scale(1.75);
-                        }
-                    }
-                }
-            }
-        }
-
-        #section-sortables {
-            .sortables {
-                .sort-controls {
-                    margin-bottom: $gutter;
-
-                    .active {
-                        @extend .button-blue;
-                    }
-                }
-
-                .sort-container {
-                    @include clearfix();
-                    display: flex;
-                    flex-flow: row wrap;
-
-                    .sort-item {
-                        height: 50px;
-                        width: 50px;
-
-                        &.sort-category-1 {
-                            @include patterns(category-one);
-                        }
-
-                        &.sort-category-2 {
-                            @include patterns(category-two);
-                        }
-
-                        &.sort-category-3 {
-                            @include patterns(category-three);
-                        }
-
-                        &.sort-category-4 {
-                            @include patterns(category-four);
-                        }
-                    }
-                }
-            }
-        }
-
-        #section-counter {
-            .doc-item {
-                .flex-table-item-primary {
-                    padding-right: $gutter;
-                }
-            }
-        }
-
-        .doc-item {
-            border-radius: 0.25rem 0.25rem 0 0;
-            border: 1px solid $border-color;
-            position: relative;
-            line-height: 1.4;
-            font-size: 13px;
-            padding: 20px;
-
-            &-description {
-                @extend .alert-blankslate;
-
-                border: 1px solid $border-color;
-                padding: ($gutter / 1.5);
-                border-radius: 0;
-                text-align: left;
-                margin-top: -1px;
-
-                &-header {
-                    margin: 0 0 16px;
-                }
-
-                p {
-                    > code {
-                        background-color: transparentize($black, 0.95);
-                        border-radius: 3px;
-                        font-size: 85%;
-                        padding: 0.2em;
-                        margin: 0;
-
-                    }
-
-                    &:not(:empty):first-of-type {
-                        margin-top: 0;
-                    }
-
-                    &:not(:empty):last-of-type {
-                        margin-bottom: 0;
-                    }
-                    &:empty {
-                        display: none;
-                    }
-                }
-            }
-
-            &-code {
-                border: 1px solid $border-color;
-                border-radius: 0 0 0.25rem 0.25rem;
-                margin-bottom: ($gutter * 2);
-                background-color: lighten(darken($brand-gray-light, 1.5%), 40%);
-                margin-top: -1px;
-
-                &-header {
-                    padding: 16px;
+                &-title {
                     margin: 0;
+                    padding: ($gutter / 2);
+                    line-height: ($gutter * 2);
                 }
+            }
 
-                pre {
-                    background-color: lighten(darken($brand-gray-light, 5%), 40%);
-                    margin: 0 16px 16px;
-                    border-radius: 3px;
-                    line-height: 1.45;
-                    font-size: 85%;
-                    overflow: auto;
-                    padding: 16px;
+            &-toggle {
+                float: right;
 
-                    + .doc-item-code-header {
-                        padding-top: 0;
+                button {
+                    @include nofocus();
+
+                    border: 0;
+                    bottom: -1px;
+                    background: 0;
+                    position: relative;
+                    padding: ($gutter / 2);
+                    line-height: ($gutter * 2);
+
+                    &.active {
+                        box-shadow: inset $brand-primary 0 -2px 0 0;
+                        color: $brand-primary;
                     }
                 }
             }
+
+            figure.highlight {
+                margin: 20px 0 0;
+
+                &:not(:last-child) {
+                    margin-bottom: $gutter;
+                }
+            }
         }
+    }
+
+    .site-content-sidebar {
+        list-style-type: none;
+
+        li {
+            a {
+                @include nofocus();
+
+                display: block;
+                font-size: 14px;
+                font-weight: 300;
+                padding: 8px 12px;
+                padding-left: ($gutter * 1.5);
+            }
+
+            &:hover {
+                box-shadow: inset transparentize($brand-primary, 0.7) 2px 0 0 0;
+            }
+
+            &.current {
+                box-shadow: inset $brand-primary 2px 0 0 0;
+
+                a {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &.alerts {
+        .alert {
+            margin-bottom: $gutter;
+        }
+    }
+
+    &.icons {
+        .icon-container {
+            width: 20%;
+            float: left;
+            text-align: center;
+            padding: ($gutter);
+
+            .icon {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &.flags {
+        .flag {
+            display: inline-block;
+        }
+    }
+
+    &.looseleaf {
+        .loose-leaf {
+            margin: 40px auto 0;
+        }
+    }
+
+    &.patterns {
+        .pattern-canvas {
+            height: 175px;
+        }
+    }
+
+    &.sortables {
+        .sortables {
+            .sort-controls {
+                margin-bottom: ($gutter);
+            }
+
+            .sort-container {
+                .sort-item {
+                    height: 50px;
+                    width: 50px;
+
+                    &.sort-category-1 { @include pattern(sort-category-1); }
+                    &.sort-category-2 { @include pattern(sort-category-2); }
+                    &.sort-category-3 { @include pattern(sort-category-3); }
+                    &.sort-category-4 { @include pattern(sort-category-4); }
+                }
+            }
+        }
+    }
+
+    .site-footer {
+        background: $footer-bg;
+        min-height: 350px;
     }
 }

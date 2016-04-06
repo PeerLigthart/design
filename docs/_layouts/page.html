@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="docs-page">
+
+    <header class="docs-page-header">
+        <div class="docs-page-toggle">
+            <button type="button" name="button" class="docs-page-toggle-design">Design</button>
+            <button type="button" name="button" class="docs-page-toggle-code">Code</button>
+            <button type="button" name="button" class="docs-page-toggle-both active">Both</button>
+        </div>
+        <h1 class="docs-page-header-title">{{ page.title }}</h1>
+    </header>
+
+    <section class="docs-page-content">
+        {{ content }}
+    </section>
+
+</article>

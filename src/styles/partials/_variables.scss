@@ -1,6 +1,6 @@
 // Project URL's
 $project-url-homepage:                         'https://www.forcir.com';
-$project-url-patterns:                         'https://patterns.mur.me';
+$project-url-patterns:                         'https://patterns.forcir.com';
 $project-url-designs:                          'https://design.forcir.com';
 
 // Versions
@@ -34,7 +34,7 @@ $focus-box-shadow:                              transparentize($focus-border-col
 $bezier:                                        cubic-bezier(0.3, 0, 0, 1.3) !default;
 
 // z-index values
-$zindex-navigation:                             1300 !default;
+$zindex-navigation:                             1000002 !default;
 $zindex-modal:                                  1200 !default;
 $zindex-gallery-item:                           1100 !default;
 
@@ -81,6 +81,12 @@ $button-danger-bg:                              #b33630 !default;
 $button-danger-color:                           ($white) !default;
 $button-danger-border:                          #942d28 !default;
 
+// Cards
+
+$card-border-color-top:                         #e5e6e9 !default;
+$card-border-color-sides:                       #e5e6e9 !default;
+$card-border-color-bottom:                      #d0d1d5 !default;
+
 // Alerts
 $alert-bg:                                      #e2eef9 !default;
 $alert-color:                                   #224466 !default;
@@ -124,12 +130,12 @@ $repo-private-text:                             #a1882b;
 $repo-private-bg:                               #fff9ea;
 $repo-private-icon:                             #e9dba5;
 
-$navigation-height:                             50px !default;
+$navigation-height:                             42px !default;
 $navigation-bg:                                 transparentize($white, 0.05) !default;
 $navigation-border-color:                       transparentize($black, 0.9) !default;
 $navigation-border-height:                      1px !default;
 
-$navigation-fixed-height:                       50px !default;
+$navigation-fixed-height:                       42px !default;
 $navigation-fixed-bg:                           $white !default;
 $navigation-fixed-fade-out:                     0 !default;
 $navigation-fixed-border-color:                 $border-color !default;
@@ -140,6 +146,9 @@ $navigation-mobile-toggle-beat-size:            ($navigation-mobile-toggle-size 
 
 $navigation-return-to-top-width:                40px !default;
 $navigation-return-to-top-height:               40px !default;
+
+// Footer Variables
+$footer-bg:                                    #333333 !default;
 
 // Loose Leaf Variables
 $loose-leaf-bg:                                 #f9f9f9 !default;

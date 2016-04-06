@@ -85,10 +85,20 @@ tt,
 code {
     font-family: $mono-font;
     font-size: 12px;
+    background: lighten($border-color, 5%);
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 
 pre {
     margin-top: 0;
     margin-bottom: 0;
+    padding: $gutter;
+    border-radius: 3px;
     font: 12px $mono-font;
+    background: lighten($body-bg-contrast, 2.5%);
+
+    code {
+        background: 0;
+    }
 }
