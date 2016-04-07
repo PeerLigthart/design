@@ -47,17 +47,21 @@
     &-logo {
         float: left;
 
-        &-link,
-        &-link:link {
+        &-link {
+            margin: ($navigation-fixed-height / 3.6) 0;
             color: transparentize($black, 0.35);
             text-transform: lowercase;
             transition: 0.175s ease;
-            margin: ($navigation-fixed-height / 3.6) 0;
+            padding-left: ($gutter);
             line-height: 20px;
             font-weight: 500;
             font-size: 24px;
             display: block;
             float: left;
+
+            background-image: url('../img/brand/logo-white.svg');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
 
             &:hover {
                 color: $black;

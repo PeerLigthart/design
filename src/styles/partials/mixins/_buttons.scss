@@ -34,8 +34,7 @@
         }
 
         &:hover,
-        &:active,
-        &:hover:link {
+        &:active {
             color: $color;
             text-decoration: none;
             border-color: darken($border, 5%);
