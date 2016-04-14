@@ -10,9 +10,8 @@ title: Forcir Design
 email: admin@forcir.com
 description: ""
 baseurl: ""
-url: "https://www.forcir.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://design.forcir.com"
+github_username:  Forcir
 
 # Build settings
 include: ['_pages']
