@@ -1,0 +1,26 @@
+.card {
+    outline: 0;
+    display: block;
+    border: 1px solid;
+    padding: ($gutter);
+    border-radius: 3px;
+    margin-bottom: ($gutter / 2);
+
+    background-color: $card-default-bg;
+    border-color: ($card-border-color-top) ($card-border-color-sides) ($card-border-color-bottom);
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &-banner {
+        margin: -($gutter - ($gutter / 4));
+        margin-bottom: ($gutter / 2);
+        min-height: 140px;
+    }
+
+    &-title {
+        font-size: 22px;
+        color: transparentize($black, 0.2);
+    }
+}

@@ -1,9 +1,14 @@
-<header class="site-header site-header-parallax">
-    <nav role="navigation" class="navigation navigation-fixed-top">
+<header class="site-header">
+    <nav role="navigation" class="navigation">
         <div class="container">
             <div class="navigation-logo">
                 <a href="https://www.forcir.com" class="navigation-logo-link">Forcir</a>
-                <span class="navigation-logo-project-link">design</span>
+                <div class="dropdown dropdown-s">
+                    <a class="navigation-logo-project-link dropdown-toggle" href="#!">design</a>
+                    <div class="dropdown-menu">
+                        <div class="loader"><img src="../img/loader.svg" alt="Loader" /></div>
+                    </div>
+                </div>
             </div>
             <div class="navigation-mobile-toggle">
                 <div class="icon">
@@ -12,9 +17,22 @@
                 </div>
             </div>
             <div class="navigation-links">
-                <ul class="navigation-links-right">
-                    
-                </ul>
+                <section class="navigation-links-right">
+                    <a class="navigation-links-item" href="/">Home</a>
+                    <div class="dropdown dropdown-sw">
+                        <a class="navigation-links-item dropdown-toggle" href="#!">GitHub</a>
+                        <div class="dropdown-menu">
+                            <a href="https://github.com/Forcir/design">Repo</a>
+                            <a href="https://github.com/Forcir/design/issues">Issues</a>
+                            <a href="https://github.com/Forcir/design/archive/master.zip">Download</a>
+                            <i class=divider></i>
+                            <div class="github-buttons clearfix">
+                                <iframe src="https://ghbtns.com/github-btn.html?user=forcir&repo=design&type=fork" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+                                <iframe src="https://ghbtns.com/github-btn.html?user=forcir&repo=design&type=star" frameborder="0" scrolling="0" width="51px" height="20px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </nav>

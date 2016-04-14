@@ -51,6 +51,9 @@ linters:
     SelectorDepth:
         enabled: false
 
+    SpaceAfterPropertyColon:
+        enabled: false
+
     StringQuotes:
         enabled: true
         style: single_quotes

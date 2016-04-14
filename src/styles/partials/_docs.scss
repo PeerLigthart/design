@@ -1,10 +1,19 @@
 // Styles for the Demo/Example Pages
 
 html.docs {
-    min-height: 150vh;
-
     body {
         background-color: $body-bg;
+    }
+
+    .site-header {
+        .navigation {
+            .dropdown {
+                .github-buttons {
+                    padding: 6px 15px 0;
+                    width: 138px;
+                }
+            }
+        }
     }
 
     .content-container {
@@ -14,6 +23,14 @@ html.docs {
         padding: ($gutter / 2);
         background: $body-bg;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+        .docs-card {
+            transition: 0.175s;
+
+            &:hover {
+                box-shadow: 0 2px 5px 0 transparentize($black, 0.84), 0 2px 10px 0 transparentize($black, 0.88);
+            }
+        }
 
         .docs-page {
             @include clearfix();
@@ -93,54 +110,9 @@ html.docs {
         }
     }
 
-    &.icons {
-        .icon-container {
-            width: 20%;
-            float: left;
-            text-align: center;
-            padding: ($gutter);
-
-            .icon {
-                font-size: 32px;
-            }
-        }
-    }
-
-    &.flags {
-        .flag {
-            display: inline-block;
-        }
-    }
-
-    &.looseleaf {
-        .loose-leaf {
-            margin: 40px auto 0;
-        }
-    }
-
     &.patterns {
         .pattern-canvas {
             height: 175px;
-        }
-    }
-
-    &.sortables {
-        .sortables {
-            .sort-controls {
-                margin-bottom: ($gutter);
-            }
-
-            .sort-container {
-                .sort-item {
-                    height: 50px;
-                    width: 50px;
-
-                    &.sort-category-1 { @include pattern(sort-category-1); }
-                    &.sort-category-2 { @include pattern(sort-category-2); }
-                    &.sort-category-3 { @include pattern(sort-category-3); }
-                    &.sort-category-4 { @include pattern(sort-category-4); }
-                }
-            }
         }
     }
 

@@ -34,10 +34,7 @@ gulp.task('scripts-vendor', function() {
     return gulp.src([
         config.jsPath + '/vendor/jquery-1.11.3.js',
         config.jsPath + '/vendor/browser.js',
-        config.jsPath + '/vendor/fixedsticky.js',
-        config.jsPath + '/vendor/sort.js',
         config.jsPath + '/vendor/select2.js',
-        config.jsPath + '/vendor/countUp.js',
         config.jsPath + '/vendor/jquery.caret.js',
         config.jsPath + '/vendor/jquery.payment.js',
         config.jsPath + '/vendor/jquery.mobilePhoneNumber.js'

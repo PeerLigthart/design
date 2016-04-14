@@ -122,7 +122,7 @@ permalink: /buttons
 
 <div class="button-container">
     <button type="button" type="button" class="button button-small button-icon">
-        <i class="icon icon-pencil"></i>
+        <i class="icon ui-1_pencil"></i>
         <div>With Icon</div>
         <span>With Icon</span>
     </button>

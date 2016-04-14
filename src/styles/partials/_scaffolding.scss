@@ -1,12 +1,5 @@
 * {
     box-sizing: border-box;
-
-    &:focus {
-        outline: 0;
-        text-decoration: none;
-        border-color: $focus-border-color;
-        box-shadow: 0 0 5px transparentize($focus-border-color, 0.5);
-    }
 }
 
 input,

@@ -166,3 +166,5 @@ Taking in a valid credit card safely, securely, and with proper validation is ex
 ## URL AutoFill
 
 <a href="/forms?autofill=true&username=Example%20Username&email=admin%40forcir.com&month=April&cc-number=4111111111111111&cc-cvc=712&cc-expiry=02/17&field-with-button=Awesome!&comments=Textareas%20too,%20yep!" class="btn">Try it out!</a>
+
+<a href="/forms?autofill=true&username=Example%20Username&email=admin%40forcir.com&month=April&cc-number=4111111111111111&cc-cvc=712&cc-expiry=02/17&field-with-button=Awesome!&comments=Textareas%20too,%20yep!&cleanURL=true" class="btn">Try it out (Cleans URL)!</a>

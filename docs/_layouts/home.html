@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html class="docs">
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <div class="site-content">
+        <main class="content-container container-fixed">
+            {{ content }}
+        </main>
+    </div>
+    {% include footer.html %}
+    <div class="site-extras">
+        <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
+    </div>
+</body>
+</html>

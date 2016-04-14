@@ -7,11 +7,6 @@ permalink: /alerts
 ## Blankslate
 
 <div class="alert alert-blankslate">
-    <!-- Optional -->
-    <i class="icon-large icon-check"></i>
-    <i class="icon-large icon-x"></i>
-    <i class="icon-large icon-alert"></i>
-    <!-- Optional -->
     <h3>Blankslate Alert</h3>
     <p>This is a blankslate-style alert.</p>
     <p>For when an area needs to be occupied and a function can be performed to occupy the area.</p>
@@ -20,11 +15,6 @@ permalink: /alerts
 
 {% highlight html %}
 <div class="alert alert-blankslate">
-    <!-- Optional -->
-    <i class="icon-large icon-check"></i>
-    <i class="icon-large icon-x"></i>
-    <i class="icon-large icon-alert"></i>
-    <!-- Optional -->
     <h3>Blankslate Alert</h3>
     <p>This is a blankslate-style alert.</p>
     <p>For when an area needs to be occupied and a function can be performed to occupy the area.</p>

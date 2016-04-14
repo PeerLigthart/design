@@ -10,12 +10,12 @@ All come with their own slightly adjusted hover-state colours.
 
 <p class="btn-group btn-group-sm">
     <button type="button" type="button" class="button button-green button-small button-icon add-new-tag">
-        <i class="icon icon-plus"></i>
+        <i class="icon ui-2_fat-add"></i>
         <div>Add New Tag</div>
         <span>Add New Tag</span>
     </button>
     <button type="button" type="button" class="button button-red button-small button-icon remove-tag">
-        <i class="icon icon-x"></i>
+        <i class="icon ui-2_fat-remove"></i>
         <div>Remove 5 Tag</div>
         <span>Remove 5 Tag</span>
     </button>
