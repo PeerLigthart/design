@@ -11,14 +11,6 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-    {% if page.title %}
-    <style type="text/css">
-    .site-header:before {
-        background-image: url('https://patterns.forcir.com/v1/{{ page.title | slugify }}');
-    }
-    </style>
-    {% endif %}
-
     <script src="{{ "/js/vendor.js" | prepend: site.baseurl }}"></script>
 
     <script>
