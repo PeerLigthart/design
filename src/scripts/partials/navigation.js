@@ -17,6 +17,14 @@ $(window).scroll(function (event) {
     }
 });
 
+$('.navigation-mobile-toggle .icon').on('click tap', function(e) {
+    $(this).toggleClass('active');
+    $('.tap').toggleClass('active');
+    $('body').toggleClass('freeze');
+    $('.mobile-toggle').toggleClass('open');
+    $('.navigation').toggleClass('navigation-mobile-active');
+});
+
 $('.navigation-logo-project-link').click(function (e) {
     var $this = $(this);
     forcirServices($('.navigation-logo-project-link ~ .dropdown-menu'));

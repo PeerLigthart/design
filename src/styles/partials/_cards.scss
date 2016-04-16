@@ -2,7 +2,6 @@
     outline: 0;
     display: block;
     border: 1px solid;
-    padding: ($gutter);
     border-radius: 3px;
     margin-bottom: ($gutter / 2);
 
@@ -14,13 +13,28 @@
     }
 
     &-banner {
-        margin: -($gutter - ($gutter / 4));
-        margin-bottom: ($gutter / 2);
         min-height: 140px;
+
+        margin: ($gutter / 4);
+        margin-bottom: 0;
     }
 
     &-title {
-        font-size: 22px;
         color: transparentize($black, 0.2);
+        padding: ($gutter / 2);
+        font-size: 22px;
+
+        &-mini {
+            background-color: $card-title-mini-bg;
+            border-bottom: 1px solid $border-color;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 3px;
+            padding: 10px 12px;
+            font-size: 12px;
+        }
+    }
+
+    &-body {
+        padding: ($gutter / 2);
     }
 }
