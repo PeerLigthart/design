@@ -54,7 +54,9 @@
             &:before {
                 color: $white-contrast !important;
                 margin-right: ($gutter / 3);
-                content: '/';
+                border-left: 1px solid transparentize($white, 0.9);
+                box-shadow: transparentize($black, 0.9) -1px 0;
+                content: '';
             }
 
             &.open,
