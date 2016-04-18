@@ -2,6 +2,7 @@
 $project-url-homepage:                         'https://www.forcir.com';
 $project-url-patterns:                         'https://patterns.forcir.com';
 $project-url-designs:                          'https://design.forcir.com';
+$project-url-api:                              'https://api.forcir.com';
 
 // Versions
 $patterns-version:                             'v1';
@@ -91,10 +92,17 @@ $button-danger-border:                          #942d28 !default;
 
 // Cards
 $card-default-bg:                               #ffffff !default;
-$card-border-color-top:                         #e5e6e9 !default;
-$card-border-color-sides:                       #e5e6e9 !default;
-$card-border-color-bottom:                      #d0d1d5 !default;
-$card-title-mini-bg:                            #f6f7f8 !default;
+$card-default-text-color:                       $black !default;
+$card-default-border-color:                     #e5e6e9 !default;
+$card-default-title-mini-bg:                    #f6f7f8 !default;
+
+$card-red-text-color:                           #991111 !default;
+$card-red-border-color:                         #d2b2b2 !default;
+$card-red-title-mini-bg:                        #fcdede !default;
+
+$card-green-text-color:                         #424c42 !default;
+$card-green-border-color:                       #c8dfc2 !default;
+$card-green-title-mini-bg:                      #ecffea !default;
 
 // Dropdowns
 $dropdown-default-bg:                           #ffffff !default;

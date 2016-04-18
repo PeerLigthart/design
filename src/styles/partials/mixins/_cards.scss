@@ -1,0 +1,14 @@
+@mixin card($text-color: $card-default-text-color, $border: $card-default-border-color, $mini-background: $card-default-title-mini-bg, $background: $card-default-bg) {
+    background-color: $background;
+    border: 1px solid;
+    border-color: ($border) ($border) (darken($border, 10%));
+
+    .card-title {
+        color: $text-color;
+
+        &-mini {
+            background-color: $mini-background;
+            border-bottom: 1px solid ($border);
+        }
+    }
+}
