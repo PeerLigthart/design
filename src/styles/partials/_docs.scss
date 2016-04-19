@@ -2,121 +2,192 @@
 
 html.docs {
     body {
-        background-color: $body-bg;
+        padding-left: 320px;
     }
 
-    .site-header {
-        .navigation {
-            .dropdown {
-                .github-buttons {
-                    padding: 6px 15px 0;
-                    width: 138px;
+    .docs-sidebar {
+        // scss-lint:disable ColorVariable
+        border-right: 1px solid #f0f4f7;
+        background: #fafcfc;
+        // scss-lint:enable ColorVariable
+
+        top: $navigation-height;
+        position: fixed;
+        overflow: auto;
+        width: 220px;
+        bottom: 0;
+        left: 0;
+
+        li {
+            a {
+                padding: 6px 20px;
+                display: block;
+                color: $black;
+
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+
+            &:first-child {
+                a {
+                    padding-top: 15px;
+                }
+            }
+
+            &.current {
+                a {
+                    color: $brand-primary;
+                    font-weight: bold;
                 }
             }
         }
     }
 
-    .content-container {
-        min-height: 400px;
-        border-radius: 3px;
-        margin-bottom: 10px;
-        padding: ($gutter / 2);
-        background: $body-bg;
-
-        .docs-card {
-            transition: 0.175s;
-
-            &:hover {
-                box-shadow: 0 2px 5px 0 transparentize($black, 0.84), 0 2px 10px 0 transparentize($black, 0.88);
-            }
-        }
+    .docs-content {
+        position: fixed;
+        overflow: auto;
+        left: 220px;
+        bottom: 0;
+        top: 42px;
+        right: 0;
 
         .docs-page {
-            @include clearfix();
+            @include clearfix;
 
-            &-header {
-                margin: -11px -10px 10px;
-                border-bottom: 1px solid $border-color;
-
-                &-title {
-                    margin: 0;
-                    padding: ($gutter / 2);
-                    line-height: ($gutter * 2);
-                }
-            }
+            justify-content: space-around;
+            flex-flow: row wrap;
+            min-height: 100%;
+            display: flex;
 
             &-toggle {
                 float: right;
+                margin-right: ($gutter);
+                line-height: ($gutter * 2.5);
 
                 button {
                     @include nofocus();
 
-                    border: 0;
-                    bottom: -1px;
+                    transition: transform 0.175s $bezier;
+                    display: inline-block;
+                    margin-right: 6px;
+                    user-select: none;
                     background: 0;
-                    position: relative;
-                    padding: ($gutter / 2);
-                    line-height: ($gutter * 2);
+                    border: 0;
 
-                    &.active {
-                        box-shadow: inset $brand-primary 0 -2px 0 0;
-                        color: $brand-primary;
+                    &:hover {
+                        transform: scale(1.1);
                     }
                 }
             }
 
-            figure.highlight {
-                margin: 20px 0 0;
+            &-header {
+                top: $navigation-height;
+                // scss-lint:disable ColorVariable
+                background: #242729;
+                // scss-lint:enable ColorVariable
+                visibility: hidden;
+                position: fixed;
+                color: $white;
+                z-index: 50;
+                left: 220px;
+                right: 0;
 
-                &:not(:last-child) {
-                    margin-bottom: $gutter;
+                &-title {
+                    margin: 0;
+                    font-size: 20px;
+                    padding: ($gutter / 2);
+                    line-height: ($gutter * 1.5);
+
+                    a {
+                        margin-left: 6px;
+                        font-size: 12px;
+                        color: $white;
+                    }
                 }
             }
-        }
-    }
 
-    .site-content-sidebar {
-        list-style-type: none;
+            &-content {
+                // scss-lint:disable ColorVariable
+                border-right: 1px solid #f0f4f7;
+                // scss-lint:enable ColorVariable
+                background-color: $white;
+                visibility: hidden;
+                min-width: 500px;
+                flex-basis: 50%;
+                flex-grow: 1;
 
-        li {
-            a {
-                @include nofocus();
+                padding: $gutter / 2;
+                padding-top: ($navigation-height + ($gutter) - 12px);
 
-                display: block;
-                font-size: 14px;
-                font-weight: 300;
-                padding: 8px 12px;
-                padding-left: ($gutter * 1.5);
-            }
+                &-block {
+                    padding: 0 ($gutter / 2) ($gutter);
+                    // scss-lint:disable ColorVariable
+                    border-bottom: 1px solid #f0f4f7;
+                    // scss-lint:enable ColorVariable
+                    margin-right: -($gutter / 2);
+                    margin-left: -($gutter / 2);
 
-            &:hover {
-                box-shadow: inset transparentize($brand-primary, 0.7) 2px 0 0 0;
-            }
+                    .field-wrapper {
+                        margin-top: 0;
+                    }
+                }
 
-            &.current {
-                box-shadow: inset $brand-primary 2px 0 0 0;
-
-                a {
-                    font-weight: 500;
+                figure.highlight,
+                figure.highlight * {
+                    display: none;
                 }
             }
-        }
-    }
 
-    &.alerts {
-        .alert {
-            margin-bottom: $gutter;
-        }
-    }
+            &-code {
+                // scss-lint:disable ColorVariable
+                background: #fafcfc;
+                // scss-lint:enable ColorVariable
+                visibility: hidden;
+                min-width: 500px;
+                flex-basis: 50%;
+                flex-grow: 1;
 
-    &.patterns {
-        .pattern-canvas {
-            height: 175px;
+                padding: $gutter / 2;
+                padding-top: ($navigation-height + ($gutter) - 12px);
+
+                .docs-page-content-block {
+                    > *:not(figure) {
+                        display: none;
+                    }
+                }
+
+                figure {
+                    margin: 0 0 ($gutter / 2);
+
+                    pre {
+                        // scss-lint:disable ColorVariable
+                        // background-color: #272b2d;
+                        // color: #d0d0d0;
+                        // scss-lint:enable ColorVariable
+                    }
+                }
+            }
+
+            &-loader {
+                position: absolute;
+                background: $white;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                top: 0;
+
+                img {
+                    transform: translate(50%, 50%);
+                    position: absolute;
+                    bottom: 50%;
+                    right: 50%;
+                }
+            }
         }
     }
 
     .site-footer {
-        background: $footer-bg;
-        min-height: 350px;
+        display: none;
     }
 }

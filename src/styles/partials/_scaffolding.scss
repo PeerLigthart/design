@@ -15,6 +15,9 @@ body {
     background-color: $white;
     transition: 0.175s ease;
     color: $brand-gray-dark;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
 
     -webkit-font-smoothing: subpixel-antialiased;
 
@@ -40,6 +43,7 @@ body {
 
     .site-content {
         transition: 0.175s ease;
+        flex: 1;
     }
 }
 

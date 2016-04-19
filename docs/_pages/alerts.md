@@ -2,6 +2,7 @@
 layout: page
 title: Alerts
 permalink: /alerts
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/alerts.md
 ---
 
 ## Blankslate

@@ -1,19 +1,23 @@
 ---
-layout: default
+layout: docs
 ---
 <article class="docs-page">
 
     <header class="docs-page-header">
         <div class="docs-page-toggle">
-            <button type="button" name="button" class="docs-page-toggle-design">design</button>
-            <button type="button" name="button" class="docs-page-toggle-code">code</button>
-            <button type="button" name="button" class="docs-page-toggle-both active">both</button>
+            <button type="button" name="button" class="docs-page-toggle-design active">Toggle Design &amp; Description</button>
         </div>
-        <h1 class="docs-page-header-title">{{ page.title }}</h1>
+        <h1 class="docs-page-header-title">
+            <span>{{ page.title }}</span>
+            <a href="{{ page.edit-url }}">(Edit)</a>
+        </h1>
     </header>
 
     <section class="docs-page-content">
         {{ content }}
     </section>
-
+    <section class="docs-page-code">
+        {{ content }}
+    </section>
+    <div class="docs-page-loader loader"><img src="https://design.forcir.com/img/loader.svg" alt="Loader" /></div>
 </article>

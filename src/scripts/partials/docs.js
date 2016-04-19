@@ -1,24 +1,16 @@
 $('.docs-page-toggle button').click(function(e) {
     var button = $(this);
-    $('.docs-page-toggle button').removeClass('active');
-    button.addClass('active');
 
     if (button.hasClass('docs-page-toggle-design')) {
-        $('.docs-page-content *').show();
-        $('.docs-page-content h2').show();
-        $('figure.highlight, figure.highlight *').hide();
-    }
-
-    if (button.hasClass('docs-page-toggle-code')) {
-        $('.docs-page-content *').hide();
-        $('.docs-page-content h2').show();
-        $('figure.highlight, figure.highlight *').show();
-    }
-
-    if (button.hasClass('docs-page-toggle-both')) {
-        $('.docs-page-content *').show();
-        $('.docs-page-content h2').show();
-        $('figure.highlight, figure.highlight *').show();
+        button.toggleClass('active');
+        $('.docs-page-content').toggle();
+        $('.docs-page-content-block').css('height', 'auto');
+        $('.docs-page-content-block').each(function() {
+            // Assign a label for unique identification between content & code
+            $(this).attr('aria-label', $(this).prev().attr('id'));
+            // Pair and match their heights :)
+            $('[aria-label="' + $(this).prev().attr('id') + '"]').equalizeHeights();
+        });
     }
 });
 
@@ -30,4 +22,26 @@ $('.custom-cc-number').click(function(e) {
     $('.cc-number').val($(this).data('number')).trigger('input');
     $('.cc-cvc').val($(this).data('cvc')).trigger('input');
     $('.cc-expiry').val($(this).data('expiry')).trigger('input');
+});
+
+$('.docs-page-content h2, .docs-page-code h2').each(function() {
+    $(this).nextUntil("h2").wrapAll('<div class="docs-page-content-block" />');
+});
+
+$(window).on("load", function equalHeights() {
+    $.fn.equalizeHeights = function() {
+      return this.height(Math.max.apply(this, $(this).map(function(i,e) { return $(e).height() }).get()));
+    }
+
+    $('.docs-page-content-block').each(function() {
+        // Assign a label for unique identification between content & code
+        $(this).attr('aria-label', $(this).prev().attr('id'));
+        // Pair and match their heights :)
+        $('[aria-label="' + $(this).prev().attr('id') + '"]').equalizeHeights();
+    });
+
+    $('.docs-page-header, .docs-page-content, .docs-page-code').css('visibility', 'visible');
+    $('.docs-page-loader').fadeOut('slow', function() {
+        $(this).remove();
+    });
 });

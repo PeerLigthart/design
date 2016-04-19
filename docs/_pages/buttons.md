@@ -2,6 +2,7 @@
 layout: page
 title: Buttons
 permalink: /buttons
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/buttons.md
 ---
 
 ## Standard & Small Shorthand
