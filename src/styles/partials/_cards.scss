@@ -1,12 +1,10 @@
 .card {
+    @include card();
+
     outline: 0;
     display: block;
-    border: 1px solid;
     border-radius: 3px;
     margin-bottom: ($gutter / 2);
-
-    background-color: $card-default-bg;
-    border-color: ($card-border-color-top) ($card-border-color-sides) ($card-border-color-bottom);
 
     &:focus {
         box-shadow: none;
@@ -20,13 +18,10 @@
     }
 
     &-title {
-        color: transparentize($black, 0.2);
         padding: ($gutter / 2);
         font-size: 22px;
 
         &-mini {
-            background-color: $card-title-mini-bg;
-            border-bottom: 1px solid $border-color;
             border-top-right-radius: 3px;
             border-top-left-radius: 3px;
             padding: 10px 12px;
@@ -36,5 +31,18 @@
 
     &-body {
         padding: ($gutter / 2);
+    }
+
+    // Card States
+    &-red,
+    &-error,
+    &-danger {
+        @include card($card-red-text-color, $card-red-border-color, $card-red-title-mini-bg);
+    }
+
+    &-green,
+    &-success,
+    &-completed {
+        @include card($card-green-text-color, $card-green-border-color, $card-green-title-mini-bg);
     }
 }
