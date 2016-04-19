@@ -3,7 +3,19 @@ $('.docs-page-toggle button').click(function(e) {
 
     if (button.hasClass('docs-page-toggle-design')) {
         button.toggleClass('active');
-        $('.docs-page-content').fadeToggle();
+        $('.docs-page-content').fadeToggle(function(e) {
+            if ($(this).hasClass('invisible')) {
+                $(this).removeClass('invisible');
+
+                $('.docs-page-content-block').each(function() {
+                    // Pair and match their heights :)
+                    $('[aria-label="' + $(this).prev().attr('id') + '"]').equalizeHeights();
+                });
+            } else {
+                $(this).addClass('invisible');
+                $('.docs-page-content-block').css('height', 'auto');
+            }
+        });
     }
 });
 
@@ -21,8 +33,8 @@ $('.docs-page-content h2, .docs-page-code h2').each(function() {
     $(this).nextUntil("h2").wrapAll('<div class="docs-page-content-block" />');
 });
 
-$(window).on("load", function() {
-    $.fn.equalizeHeights = function(){
+$(window).on("load", function equalHeights() {
+    $.fn.equalizeHeights = function() {
       return this.height(Math.max.apply(this, $(this).map(function(i,e) { return $(e).height() }).get()));
     }
 

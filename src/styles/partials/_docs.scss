@@ -115,12 +115,13 @@ html.docs {
                 padding-top: ($navigation-height + ($gutter) - 12px);
 
                 &-block {
+                    transition: height 0.175s ease-in-out;
+                    padding: 0 ($gutter / 2) ($gutter);
                     // scss-lint:disable ColorVariable
                     border-bottom: 1px solid #f0f4f7;
                     // scss-lint:enable ColorVariable
                     margin-right: -($gutter / 2);
                     margin-left: -($gutter / 2);
-                    padding: 0 ($gutter / 2) ($gutter);
 
                     .field-wrapper {
                         margin-top: 0;

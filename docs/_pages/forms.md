@@ -92,7 +92,7 @@ All inputs fields **must** be wrapped in a `field-wrapper` class with an assigne
 
 Taking in a valid credit card safely, securely, and with proper validation is extremely important. The purpose of these inputs (invoked by the `cc-*` classes) is to allow the conversion process to be as painless as possible. Pointing out any issues with the card inputs there may be.
 
-<p class="btn-group btn-group-sm">
+<p class="btn-group btn-group-sm" style="margin-bottom: 40px">
     <button class="btn custom-cc-number" data-number="371449635398431" data-cvc="1234" data-expiry="09 / 16">Amex</button>
     <button class="btn custom-cc-number" data-number="30569309025904" data-cvc="321" data-expiry="06 / 16">Diners Club</button>
     <button class="btn custom-cc-number" data-number="6011111111111117" data-cvc="223" data-expiry="03 / 17">Discover</button>
