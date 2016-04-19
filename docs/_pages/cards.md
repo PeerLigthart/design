@@ -4,6 +4,8 @@ title: Cards
 permalink: /cards
 ---
 
+## Standard Card
+
 <div class="card">
     <header class="card-title">Card Title</header>
     <header class="card-body">Card Body</header>
@@ -19,6 +21,21 @@ permalink: /cards
 ## Mini Title
 
 <div class="card">
+    <header class="card-title-mini">Card Title</header>
+    <header class="card-body">Card Body</header>
+</div>
+
+{% highlight html %}
+<div class="card">
+    <header class="card-title-mini">Card Title</header>
+    <header class="card-body">Card Body</header>
+</div>
+{% endhighlight %}
+
+## Card Banner
+
+<div class="card">
+    <div class="card-banner"><img src="https://dummyimage.com/1500x500/e5e5e5/222.png&text=Banner+Image" alt="Banner" /></div>
     <header class="card-title-mini">Card Title</header>
     <header class="card-body">Card Body</header>
 </div>

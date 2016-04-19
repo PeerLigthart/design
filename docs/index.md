@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: docs
 ---
 <div class="columns">
     {% for node in site.pages %}

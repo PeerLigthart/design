@@ -15,6 +15,19 @@
 
         margin: ($gutter / 4);
         margin-bottom: 0;
+
+        img,
+        svg,
+        figure {
+            max-width: 100%;
+        }
+
+        ~ .card-title-mini {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
     }
 
     &-title {
