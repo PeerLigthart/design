@@ -98,6 +98,12 @@ html.docs {
                     font-size: 20px;
                     padding: ($gutter / 2);
                     line-height: ($gutter * 1.5);
+
+                    a {
+                        margin-left: 6px;
+                        font-size: 12px;
+                        color: $white;
+                    }
                 }
             }
 

@@ -2,6 +2,7 @@
 layout: page
 title: Form Controls
 permalink: /forms
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/forms.md
 ---
 
 All inputs fields **must** be wrapped in a `field-wrapper` class with an assigned `<label>`

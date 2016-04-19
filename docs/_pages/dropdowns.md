@@ -2,7 +2,7 @@
 layout: page
 title: Dropdowns
 permalink: /dropdowns
-categories: design components
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/dropdowns.md
 ---
 
 ## South

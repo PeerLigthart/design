@@ -2,6 +2,7 @@
 layout: page
 title: Graphs
 permalink: /graphs
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/graphs.md
 ---
 
 ## Bar Graph

@@ -2,6 +2,7 @@
 layout: page
 title: Cards
 permalink: /cards
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/cards.md
 ---
 
 ## Standard Card

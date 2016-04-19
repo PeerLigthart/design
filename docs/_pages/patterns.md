@@ -2,6 +2,7 @@
 layout: page
 title: Patterns
 permalink: /patterns
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/patterns.md
 ---
 
 ## Default Image

@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 permalink: /tags
+edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/tags.md
 ---
 
 Tags pretty much take care of themselves. They *must* be wrapped in a `tag-container` class, and then each tag invoked with a `tag` class on the element. Support for up to 100 tags changing colours gradually, anything after that just keeps the final blue.
