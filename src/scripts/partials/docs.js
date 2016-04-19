@@ -3,18 +3,13 @@ $('.docs-page-toggle button').click(function(e) {
 
     if (button.hasClass('docs-page-toggle-design')) {
         button.toggleClass('active');
-        $('.docs-page-content').fadeToggle(function(e) {
-            if ($(this).hasClass('invisible')) {
-                $(this).removeClass('invisible');
-
-                $('.docs-page-content-block').each(function() {
-                    // Pair and match their heights :)
-                    $('[aria-label="' + $(this).prev().attr('id') + '"]').equalizeHeights();
-                });
-            } else {
-                $(this).addClass('invisible');
-                $('.docs-page-content-block').css('height', 'auto');
-            }
+        $('.docs-page-content').toggle();
+        $('.docs-page-content-block').css('height', 'auto');
+        $('.docs-page-content-block').each(function() {
+            // Assign a label for unique identification between content & code
+            $(this).attr('aria-label', $(this).prev().attr('id'));
+            // Pair and match their heights :)
+            $('[aria-label="' + $(this).prev().attr('id') + '"]').equalizeHeights();
         });
     }
 });
