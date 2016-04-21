@@ -6,7 +6,7 @@
     cursor: pointer;
     appearance: none;
     border-width: 1px;
-    padding: 6px 12px;
+    padding: 2px 10px;
     user-select: none;
     font-weight: bold;
     line-height: 1.5;
@@ -99,10 +99,10 @@
         }
     }
 
-    &-sm,
-    &-mini,
-    &-small {
-        padding: 2px 10px;
+    &-lg,
+    &-big,
+    &-large {
+        padding: 6px 12px;
     }
 
     &-group {
@@ -131,12 +131,12 @@
             }
         }
 
-        &-sm,
-        &-mini,
-        &-small {
+        &-lg,
+        &-big,
+        &-large {
             .btn,
             .button {
-                padding: 2px 10px;
+                padding: 6px 12px;
             }
         }
     }
