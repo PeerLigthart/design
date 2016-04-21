@@ -22,3 +22,9 @@ hr {
 .select2-hidden-accessible {
     display: none;
 }
+
+// scss-lint:disable SelectorFormat
+.__slackin {
+    z-index: 1200000;
+}
+// scss-lint:enable SelectorFormat

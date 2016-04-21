@@ -5,9 +5,9 @@ permalink: /forms
 edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/forms.md
 ---
 
-All inputs fields **must** be wrapped in a `field-wrapper` class with an assigned `<label>`
-
 ## Standard Text Input
+
+All inputs fields **must** be wrapped in a `field-wrapper` class with an assigned `<label>`
 
 <div class="field-wrapper">
     <label for="username">Username</label>

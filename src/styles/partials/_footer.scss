@@ -1,4 +1,80 @@
 .site-footer {
+    border-top: 1px solid darken($footer-bg, 5%);
     background: $footer-bg;
-    min-height: 150px;
+
+    &-upper {
+        @include clearfix();
+
+        #products {
+            .upper-footer-title {
+                color: $brand-primary;
+            }
+        }
+
+        #community {
+            .upper-footer-title {
+                color: $brand-green;
+            }
+        }
+
+        #social {
+            .upper-footer-title {
+                color: $brand-purple;
+            }
+        }
+
+        #news {
+            .upper-footer-title {
+                color: $brand-red;
+            }
+        }
+
+        &-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        ul {
+            list-style-type: none;
+            font-weight: 500;
+
+            li {
+                margin-bottom: 6px;
+            }
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+
+    &-lower {
+        @include clearfix();
+
+        border-top: 1px solid darken($footer-bg, 5%);
+        padding-top: ($gutter / 2);
+        margin-top: ($gutter / 2);
+        padding-bottom: $gutter;
+        font-size: 11px;
+
+        .legal {
+            > a {
+                color: $black;
+            }
+
+            .dropdown-menu a {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+
+        .copyright {
+            float: right;
+        }
+    }
 }

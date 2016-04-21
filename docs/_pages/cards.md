@@ -42,7 +42,9 @@ edit-url: https://github.com/Forcir/design/blob/master/docs/_pages/cards.md
 </div>
 
 {% highlight html %}
+
 <div class="card">
+    <div class="card-banner"><img src=".." alt="Banner" /></div>
     <header class="card-title-mini">Card Title</header>
     <header class="card-body">Card Body</header>
 </div>

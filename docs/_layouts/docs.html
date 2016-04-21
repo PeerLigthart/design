@@ -26,9 +26,9 @@
         </aside>
         <main class="docs-content">
             {{ content }}
+            {% include footer.html %}
         </main>
     </div>
-    {% include footer.html %}
     <div class="site-extras">
         <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
     </div>
