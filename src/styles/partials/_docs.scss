@@ -30,8 +30,8 @@ html.docs {
     }
 
     .docs-sidebar {
+        border-right: 1px solid $border-color;
         // scss-lint:disable ColorVariable
-        border-right: 1px solid #f0f4f7;
         background: #fafcfc;
         // scss-lint:enable ColorVariable
 
@@ -69,6 +69,7 @@ html.docs {
     }
 
     .docs-content {
+        font-family: $body-font-type;
         position: fixed;
         overflow: auto;
         left: 220px;

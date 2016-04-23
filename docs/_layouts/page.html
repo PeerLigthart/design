@@ -3,6 +3,7 @@ layout: docs
 ---
 <article class="docs-page">
 
+    {% if page.title %}
     <header class="docs-page-header">
         <div class="docs-page-toggle">
             <button type="button" name="button" class="docs-page-toggle-design active">Toggle Design &amp; Description</button>
@@ -12,6 +13,18 @@ layout: docs
             <a href="{{ page.edit-url }}" target="_blank">(Edit)</a>
         </h1>
     </header>
+    {% else %}
+    <style type="text/css">
+    .docs-page-content,
+    .docs-page-code {
+        padding-top: 0 !important;
+    }
+
+    .docs-page-code {
+        opacity: 0;
+    }
+    </style>
+    {% endif %}
 
     <section class="docs-page-content">
         {{ content }}

@@ -1,11 +1,12 @@
 .site-footer {
-    border-top: 1px solid darken($footer-bg, 5%);
+    border-top: 1px solid $border-color;
     background: $footer-bg;
+    padding-top: $gutter;
 
     &-upper {
         @include clearfix();
 
-        #products {
+        #projects {
             .upper-footer-title {
                 color: $brand-primary;
             }
@@ -31,8 +32,10 @@
 
         &-title {
             text-transform: uppercase;
+            margin-bottom: $gutter;
             font-weight: 600;
             font-size: 12px;
+            margin-top: 0;
         }
 
         ul {
