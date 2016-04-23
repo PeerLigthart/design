@@ -26,4 +26,4 @@ Forcir's design documentation, included in this repo in the root directory, is b
 
 ## License
 
-Apache
+MIT
